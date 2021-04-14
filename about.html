@@ -23,16 +23,16 @@
   </div>
   <header id="header">
     <button class="menu-icon menu-icon-white" id="menu-button" onclick="openNav()">&#9776;</button>
-    <h1 class="header-title blue display-none" id="header-title">Learn German</h1>
-    <div id="mySidenav" class="side-nav">
+    <h1 class="header-title blue display-none" id="header-title">Socials</h1>
+    <div id="mySidenav" class="side-nav hidden">
       <button href="javascript:void(0)" class="close-button menu-link" onclick="closeNav()">&times;</button>
       <div class="side-nav-menu" onclick="closeNav()">
-        <a tabindex="0" class="menu-link link-scale-up" href="index.html">Home</a>
-        <a tabindex="0" class="menu-link link-scale-up" href="about.html" aria-current="page">About</a>
-        <a tabindex="0" class="menu-link link-scale-up" href="socials.html">Socials</a>
+        <a class="menu-link menu-link-item" href="index.html">Home</a>
+        <a class="menu-link menu-link-item" href="about.html" aria-current="page">About</a>
+        <a class="menu-link menu-link-item" href="socials.html">Socials</a>
       </div>
       <div class="side-nav-menu-attribution">
-        <a tabindex="0" class="side-nav-menu-attribution-text link-scale-up" href="https://bjorn.rostron.co">Made by Borganstein</a>
+        <a class="menu-link menu-link-item side-nav-menu-attribution-text" href="https://bjorn.rostron.co">Made by Borganstein</a>
       </div>
     </div>
   </header>
@@ -43,13 +43,19 @@
     </div>
     <div class="about-text">
       <p>This is the final project of a General Assembly course. Using HTML, CSS and Javascript to create a flashcard site to Learn German.</p>
-      <p>I am bilingual in German (and obviously English) but living in Australia for the last 25 years means that I struggle with my German. This site, I hope will help me (and possible others) to learn some German. Also, just a fun way to play around with some basic HTML, CSS and JS. </p>
+      <p>I am bilingual in German (and obviously English) but living in Australia for the last 25 years means that I struggle with my German. This site, I hope will help me (and possible others) to learn some German. Also, just a fun way to play
+        around with some basic HTML, CSS and JS. </p>
       <p>Hope you enjoy and please hit me up if you have any questions or helpful tips.</p>
     </div>
-      <div class="social-links">
-        <a tabindex="0" class="link-style link-style-animation" href="https://twitter.com/borganstein"><i class="fab fa-twitter link-style-icon"></i></a>
-        <a tabindex="0" class="link-style link-style-animation" href="mailto:german@transcendingdigital.space" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope link-style-icon"></i></a>
-        <a tabindex="0" class="link-style link-style-animation" href="/sessionmessenger.html"><i class="fas fa-comment-alt link-style-icon"></i></a>
+    <div class="social-link-grid">
+      <div class="social-link-item">
+        <a title="twitter" class="social-link link-style" href="https://twitter.com/borganstein"><i class="fab fa-twitter link-style-icon"></i></a>
+      </div>
+      <div class="social-link-item">
+        <a title="email" class="social-link link-style" href="mailto:german@transcendingdigital.space" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope link-style-icon"></i></a>
+      </div>
+      <div class="social-link-item">
+        <a title="session-messenger" class="social-link link-style" href="sessionmessenger.html"><i class="fas fa-comment-alt link-style-icon"></i></a>
       </div>
   </main>
   <footer>

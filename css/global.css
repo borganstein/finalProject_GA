@@ -9,9 +9,9 @@
   font-size: 16px;
 }
 
-main {
+/* main {
   height: 1000px;
-}
+} */
 
 body {
   position: relative;
@@ -37,10 +37,6 @@ a {
   font-weight: 800;
 }
 
-.link-scale-up:hover {
-  transform: scale(1.1);
-}
-
 p {
   padding: 10px;
 }
@@ -62,9 +58,25 @@ p {
   overflow-y: hidden;
 }
 
+.interaction-disabled {
+  pointer-events: none;
+}
+
+.interaction-enabled {
+  pointer-events: auto;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+
 /* link & button styling with hover animation */
 
-.social-links {
+.social-link-grid {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 1rem;
@@ -76,45 +88,27 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #268bcc;
-  color: #f5f5f5;
-  font-weight: 800;
-  border: 3px solid #268bcc;
-  padding: 2rem 4.2rem;
-  width: 60%;
-}
-
-.social-link-item p {
-  margin: 0px;
-  padding: 0px;
-}
-
-.social-link-item:hover {
   background-color: #f5f5f5;
   color: #268bcc;
-}
-
-.social-link-item:focus {
-      background-color: #268bcc;
-  color: #f5f5f5;
+  font-weight: 800;
+  width: 100%;
 }
 
  .link-style {
+  border: 3px solid #268bcc;
   text-decoration: none;
-   color: #268bcc;
+  color: #268bcc;
+  padding: 2rem 2rem;
 }
 
-.link-style:hover {
-    background-color: #268bcc;
-  color: #f5f5f5;
+.link-style:hover, .link-style:focus {
+  background-color:  #268bcc;
+  color:#f5f5f5;
 }
 
-.link-style:focus {
-      background-color: #268bcc;
-  color: #f5f5f5;
-}
 
 .link-style-icon {
+
   font-size: 4rem;
   margin: 1rem;
 }
@@ -197,7 +191,7 @@ header {
   display: grid;
   grid-template-columns: 1fr;
   height: 100%;
-  width: 0;
+  width: 100%;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -233,6 +227,10 @@ header {
   background-color: transparent;
   transition: 0.3s;
   border: none;
+}
+
+.menu-link-item {
+  transform: scale(1.1);
 }
 
 .side-nav-menu-attribution {
@@ -451,7 +449,7 @@ footer p {
   }
 
   .social-links {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     margin: 2.5rem 2.5rem;
   }
     .social-link-item {
