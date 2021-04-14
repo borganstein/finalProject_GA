@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--  Meta  -->
+  <meta charset="UTF-8">
+  <title>Learning German</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--  Styles  -->
+  <link rel="stylesheet" href="styles/index.processed.css">
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/flashcard.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <!--   scripts -->
+  <script src="https://kit.fontawesome.com/f2c6109eb3.js" crossorigin="anonymous"></script>
+  <script src="scripts/navigation_menu.js"></script>
+  <script src="scripts/fnoscrd.js"></script>
+  <script src="scripts/header.js"></script>
+</head>
+<body>
+  <div class="hero-cover" id="hero-cover" >
+    <h1 class="hero-h1">Learning</h1>
+      <h1 class="hero-h1">German</h1>
+  </div>
+  <header id="header">
+    <button class="menu-icon menu-icon-white" id="menu-button" onclick="openNav()">&#9776;</button>
+    <h1 class="header-title blue display-none" id="header-title">Learn German</h1>
+    <div id="mySidenav" class="side-nav">
+      <button href="javascript:void(0)" class="close-button menu-link" onclick="closeNav()">&times;</button>
+      <div class="side-nav-menu" onclick="closeNav()">
+        <a tabindex="0" class="menu-link link-scale-up" href="/index.html" aria-current="page">Home</a>
+        <a tabindex="0" class="menu-link link-scale-up" href="/about.html">About</a>
+        <a tabindex="0" class="menu-link link-scale-up" href="/socials.html">Socials</a>
+      </div>
+      <div class="side-nav-menu-attribution">
+        <p>Made by</p>
+        <a tabindex="0" class="side-nav-menu-attribution-text link-scale-up" href="https://bjorn.rostron.co">Borganstein</a>
+      </div>
+    </div>
+  </header>
+  <main class="main-positioning">
+    <h1>Why flashcards?</h1>
+    <p>The scientific research suggests that the use of flashcards can dramatically improve memory retention as well as spontaneous recall. This makes it perfect for learning a new language. It hits those parts of the brain that are crucial in being able to learn a new language (or an old one!).</p>
+    <div class="flashcard" id="flashcard">
+    <button id="flashcard-front" class="flashcard-front" onclick="flipCardFront()">
+      <h1>German</h1>
+      <p id="flashcard-german"><!-- german word goes here --></p>
+    </button>
+    <button id="flashcard-back" class="flashcard-back" onclick="flipCardBack()">
+      <h1>English</h1>
+   <p id="flashcard-english"><!-- english word goes here --></p>
+    </button>
+    </div>
+    <button class="hero-button" onclick="flipcardButton()">Start</button>
+  </main>
+  <footer>
+    <p>Made with Caffeine in Sydney</p>
+  </footer>
+</body>
+</html>

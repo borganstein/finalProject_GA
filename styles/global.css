@@ -1,0 +1,497 @@
+/* ########## Global CSS ########## 
+
+   Common CSS for all .html pages
+
+################################### */
+
+* {
+  font-family: "Roboto Mono", monospace;
+  font-size: 16px;
+}
+
+main {
+  height: 1000px;
+}
+
+body {
+  position: relative;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #268bcc;
+  background-color: #f5f5f5;
+}
+
+
+.main-positioning {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  overflow: hidden;
+}
+
+a {
+  color: #a54a4a;
+  font-weight: 800;
+}
+
+.link-scale-up:hover {
+  transform: scale(1.1);
+}
+
+p {
+  padding: 10px;
+}
+
+.blue {
+  color: #268bcc;
+}
+
+/*animation*/
+
+.display-none {
+  display: none;
+}
+
+.stop-scroll {
+  overflow-y: hidden;
+}
+
+/* link & button styling with hover animation */
+
+.social-links {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+  margin-top: 3rem;
+  justify-items: center;
+}
+
+.social-link-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #268bcc;
+  color: #f5f5f5;
+  font-weight: 800;
+  border: 3px solid #268bcc;
+  padding: 2rem 4.2rem;
+  width: 60%;
+}
+
+.social-link-item p {
+  margin: 0px;
+  padding: 0px;
+}
+
+.social-link-item:hover {
+  background-color: #f5f5f5;
+  color: #268bcc;
+}
+
+.social-link-item:focus {
+      background-color: #268bcc;
+  color: #f5f5f5;
+}
+
+ .link-style {
+  text-decoration: none;
+   color: #268bcc;
+} 
+
+.link-style:hover {
+    background-color: #268bcc;
+  color: #f5f5f5;
+}
+
+.link-style:focus {
+      background-color: #268bcc;
+  color: #f5f5f5;
+}
+
+.link-style-icon {
+  font-size: 4rem;
+  margin: 1rem;
+}
+
+/* ######### Hero Image ########## */
+
+.hero-cover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../images/holgersson-unsplash-mobile.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding: 15px;
+  z-index: 1;
+}
+
+.hero-h1 {
+  margin: 10px;
+  font-size: 4rem;
+  color: lightgray;
+  text-shadow: 2px 2px black;
+  text-transform: uppercase;
+}
+
+.hero-h3 {
+font-size: 2rem;
+color: lightgray;
+}
+/* ######### Header ######### */
+
+header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #ffffff;
+  text-align: center;
+  padding-left: 20px;
+  height: 5rem;
+  z-index: 1;
+  position: fixed;
+  top: 0px;
+}
+
+.header-title {
+  font-size: 2rem;
+}
+
+.menu-icon {
+  background-color: transparent;
+  color: #fff;
+  font-size: 2rem;
+  padding-right: 20px;
+  border: none;
+}
+
+/* ##### Used for JS ##### */
+
+.header-background-opacity {
+  background-color: rgba(245, 245, 245, 0.9);
+  width: 100%;
+}
+
+.menu-icon-white {
+  background-color: transparent;
+  color: #fff;
+}
+
+.menu-icon-blue {
+  background-color: transparent;
+  color: #268bcc;
+}
+
+/* ########## Side Menu CSS items ######## */
+
+.side-nav {
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(38, 139, 204, 0.9);
+  overflow-x: hidden;
+  transition: 0.1s;
+  padding-top: 60px;
+}
+
+.side-nav .close-button {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.side-nav-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-link {
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  text-decoration: none;
+  font-size: 2.5rem;
+  color: #fff;
+  background-color: transparent;
+  transition: 0.3s;
+  border: none;
+}
+
+.side-nav-menu-attribution {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.side-nav-menu-attribution-text {
+  justify-content: flex-end;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+}
+
+ [aria-current] {
+   font-weight: bold;
+   background-color: rgba(245,245,245,0.9);
+   color: #268bcc;
+   border-radius: 5px;
+  }
+
+/* ########### Footer ########### */
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background-color: #268bcc;
+  color: #fff;
+  font-weight: 800;
+  text-align: center;
+  height: 5vh;
+  width: 100%;
+  margin-top: 5vh;
+}
+
+footer p {
+  padding: 0px;
+  margin: 0px;
+}
+
+/* ########## Home Page CSS ########## 
+
+   CSS for the Home Page
+
+################################### */
+
+/* ##### Main ###### */
+
+.hero-button {
+  background-color: transparent;
+  color: #cd5c5c;
+  border: none;
+  font-size: 3rem;
+}
+
+.hero-button:active {
+  transform: scale(1.1); /* Testing out button animation - callouts */
+}
+
+/* ########## About Page CSS ########## 
+
+   CSS for the About Page
+
+################################### */
+
+.about-intro-text {
+  margin: 0px;
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 5rem;
+}
+
+.about-intro-hero-name {
+  margin: 0px;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.about-text p {
+  margin: 1rem 2rem;
+}
+
+/* ########## Social Page CSS ########## 
+
+   CSS for the socials Page
+
+################################### */
+
+.social-h3 {
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 5rem;
+}
+
+/* ########## Session Page CSS ########## 
+
+   CSS for the Sesssion Page
+
+################################### */
+
+.session-title {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.session-intro {
+  margin-top: 5rem;
+}
+
+.session-list {
+  list-style: none;
+  padding: 1rem;
+  text-align: center;
+}
+
+.session-copy {
+  text-align: center;
+}
+
+.session-QRcode {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.session-QRcode-title {
+  background-color: #268bcc;
+  color: #f5f5f5;
+  font-size: 2rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.session-QRcode-text {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+}
+
+.session-QRcode-text p {
+  height: auto;
+  width: 10rem;
+}
+
+/* ########## CSS ########## 
+
+  Responsive Page Points 
+
+################################### */
+
+@media screen and (min-width: 750px) {
+  /* Tablets */
+  .hero-cover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url(../images/holgersson-unsplash.jpg);
+  }
+  .social-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.5rem;
+  }
+   .link-style {
+ padding: 2rem 8rem;
+}
+  .social-link-item {
+    grid-gap: 0;
+    width: 40%;
+  }
+}
+
+/* .small-text {
+  font-size: 0.9rem;
+} */
+
+@media screen and (min-width: 970px) {
+  /* Desktops */
+
+  /* ##### Global CSS */
+ 
+  .hero-cover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url(../images/holgersson-unsplash.jpg);
+  }
+  .hero-h1 {
+    margin: 10px;
+    font-size: 6rem;
+    color: lightgray;
+  }
+  .menu-icon {
+    font-size: 3rem;
+  }
+  .menu-link {
+    padding: 8px;
+    font-size: 5rem;
+  }
+
+  .side-nav-menu-attribution-text {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  
+/*   .link-style {
+      width: 12rem; NOT WORKING
+  } */
+  
+  /* ##### About Page ###### */
+
+  .about-text {
+    padding: 0px 150px;
+  }
+  
+  .social-links {
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 2.5rem 2.5rem;
+  }
+    .social-link-item {
+    grid-gap: 0;
+    width: 40%;
+  }
+}
+
+/* ########################################################## */
+/* TESTING CSS */
+
+/* #personal-site-link::after {
+  color: #268bcc;
+}
+
+#personal-site-link:hover::after {
+  content: "Personal Site";
+  color: #f5f5f5;
+}
+
+#pro-site-link::after {
+  color: #268bcc;
+}
+
+#pro-site-link:hover::after {
+  content: "Professional Site";
+  color: #f5f5f5;
+}
+
+.test li:last-child {
+  display:none;
+}
+
+.test:hover {
+  cursor: pointer;
+}
+
+.test:hover li:first-child{
+	display: none;
+}
+
+.test:hover li:last-child{
+	display:block;
+  font-size: 2rem;
+}
+ */

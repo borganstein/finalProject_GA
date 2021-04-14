@@ -1,0 +1,33 @@
+.flashcard-front {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  border: 2px solid indianred;
+  border-radius: 20px;
+  
+  background-color: #4B0082;
+  color: indianred;
+  
+  height: 300px;
+  width: 300px;
+}
+
+
+.flashcard-back {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  border: 2px solid indianred;
+  border-radius: 20px;
+  
+  background-color: indianred;
+  color: #4B0082;
+  
+  height: 300px;
+  width: 300px;
+}
+
