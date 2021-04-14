@@ -1,4 +1,4 @@
-/* ########## Global CSS ########## 
+/* ########## Global CSS ##########
 
    Common CSS for all .html pages
 
@@ -44,7 +44,10 @@ a {
 p {
   padding: 10px;
 }
-
+/* colors */
+.white {
+  color: #f5f5f5;
+}
 .blue {
   color: #268bcc;
 }
@@ -99,7 +102,7 @@ p {
  .link-style {
   text-decoration: none;
    color: #268bcc;
-} 
+}
 
 .link-style:hover {
     background-color: #268bcc;
@@ -275,7 +278,7 @@ footer p {
   margin: 0px;
 }
 
-/* ########## Home Page CSS ########## 
+/* ########## Home Page CSS ##########
 
    CSS for the Home Page
 
@@ -294,7 +297,7 @@ footer p {
   transform: scale(1.1); /* Testing out button animation - callouts */
 }
 
-/* ########## About Page CSS ########## 
+/* ########## About Page CSS ##########
 
    CSS for the About Page
 
@@ -317,7 +320,7 @@ footer p {
   margin: 1rem 2rem;
 }
 
-/* ########## Social Page CSS ########## 
+/* ########## Social Page CSS ##########
 
    CSS for the socials Page
 
@@ -329,7 +332,7 @@ footer p {
   margin-top: 5rem;
 }
 
-/* ########## Session Page CSS ########## 
+/* ########## Session Page CSS ##########
 
    CSS for the Sesssion Page
 
@@ -380,9 +383,9 @@ footer p {
   width: 10rem;
 }
 
-/* ########## CSS ########## 
+/* ########## CSS ##########
 
-  Responsive Page Points 
+  Responsive Page Points
 
 ################################### */
 
@@ -414,7 +417,7 @@ footer p {
   /* Desktops */
 
   /* ##### Global CSS */
- 
+
   .hero-cover {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
       url(../images/holgersson-unsplash.jpg);
@@ -436,17 +439,17 @@ footer p {
     font-size: 1.5rem;
     font-weight: 400;
   }
-  
+
 /*   .link-style {
       width: 12rem; NOT WORKING
   } */
-  
+
   /* ##### About Page ###### */
 
   .about-text {
     padding: 0px 150px;
   }
-  
+
   .social-links {
     grid-template-columns: 1fr 1fr 1fr;
     margin: 2.5rem 2.5rem;
