@@ -8,8 +8,19 @@ function openModal() {
 
 }
 function closeModal() {
+  //declaring variables for readability of code
+  const flashcardBack = document.querySelector("#flashcard-back");
+  const flashcardFront = document.querySelector("#flashcard-front");
+  const flashcardButtonEnglish = document.querySelector("#flashcardButton-english");
+  const flashcardButtonGerman = document.querySelector("#flashcardButton-german");
   const bodyContainer = document.querySelector("body"); // selects Body container
   const modalDiv  = document.querySelector('.modal-background');
+  //
+  flashcardBack.style.display = "none";
+  flashcardFront.style.display = "none";
+  flashcardButtonEnglish.style.display = "none";
+  flashcardButtonGerman.style.display = "flex";
+  //
   bodyContainer.classList.remove('stop-scroll');
   modalDiv.style.display = "none";
 }
@@ -64,7 +75,7 @@ function flipCardtoGerman() {
   const flashcardButtonGerman = document.querySelector("#flashcardButton-german");
   //
   flashcardBack.style.display = "none";
-  flashcardFront.style.display = "block";
+  flashcardFront.style.display = "none";
   flashcardButtonEnglish.style.display = "none";
   flashcardButtonGerman.style.display = "flex";
 }
