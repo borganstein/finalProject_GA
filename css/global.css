@@ -114,6 +114,10 @@ p {
   margin: 1rem;
 }
 
+.button-text {
+  display:none;
+}
+
 /* ############################# Hero Image #################################*/
 .hero-cover {
   display: flex;
@@ -506,7 +510,7 @@ footer p {
     padding: 0px 150px;
   }
 
-  .social-links {
+  .social-link-grid {
     grid-template-columns: 1fr 1fr;
     margin: 2.5rem 2.5rem;
   }
