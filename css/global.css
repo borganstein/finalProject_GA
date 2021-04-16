@@ -29,7 +29,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  overflow: hidden;
+
 }
 
 a {
@@ -108,7 +108,6 @@ p {
 
 
 .link-style-icon {
-
   font-size: 4rem;
   margin: 1rem;
 }
@@ -126,7 +125,7 @@ p {
   background-repeat: no-repeat;
   height: 100vh;
   padding: 15px;
-  z-index: 1;
+  z-index: 1;<div id="map"></div>
 }
 
 .hero-h1 {
@@ -141,6 +140,7 @@ p {
 font-size: 2rem;
 color: lightgray;
 }
+
 /* ######### Header ######### */
 
 header {
@@ -313,9 +313,26 @@ footer p {
   text-align: center;
   font-size: 3rem;
 }
+.about-text {
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  width: 100%;
+}
 
 .about-text p {
-  margin: 1rem 2rem;
+  margin: 1rem 1rem;
+  padding: 0rem 1rem;
+}
+
+.photo-container {
+  display: flex;
+  justify-content: center;
+}
+
+.photo-embed {
+  height: auto;
+  width: 500px;
 }
 
 /* ########## Social Page CSS ##########
@@ -459,6 +476,8 @@ footer p {
 }
 
 /* ########################################################## */
+
+
 /* TESTING CSS */
 
 /* #personal-site-link::after {

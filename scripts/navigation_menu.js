@@ -12,6 +12,7 @@ function openNav() {
   sideMenu.style.width = "100%"; // changes width to 100%; can be done without but this aids in having nice animation
   mainContainer.classList.add('interaction-disabled'); //disables pointer-events
   bodyContainer.classList.add('stop-scroll'); // stops the ability to scroll while the menu is open
+  
   socialLink.forEach(element => element.tabIndex="-1"); //uses forEach to iterate through array to add tabIndex=-1 to all elements with class .social-link
   menuLink.forEach(element => element.tabIndex="0"); //uses forEach to iterate through array to add tabIndex=0 to all elements with class .menu-link
 
