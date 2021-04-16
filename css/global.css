@@ -246,10 +246,10 @@ header {
 }
 
 .side-nav-menu-attribution {
-
   position: fixed;
   bottom: 0;
   padding-bottom: 1rem;
+  transition: 0.1s;
 }
 
 .side-nav-menu-attribution-text {
@@ -259,12 +259,13 @@ header {
   background-color: transparent;
   border: none;
   text-decoration: none;
+  transition: 0.1s;
 }
 
 .side-nav-menu-attribution-text:hover {
   text-decoration: underline;
-  -webkit-transition: width 0.1s;
-         transition: width 0.1s;
+  -webkit-transition: width 300ms;
+         transition: width 300ms;
 
 }
 
