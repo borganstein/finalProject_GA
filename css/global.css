@@ -35,6 +35,10 @@ p {
   padding: 10px;
 }
 
+/* .bold {
+  font-style: bold;
+} */
+
 /* colors */
 .white {
   color: #f5f5f5;
@@ -47,6 +51,10 @@ p {
 /*animation*/
 .display-none {
   display: none;
+}
+
+.display {
+  display: block;
 }
 
 .stop-scroll {
@@ -151,10 +159,6 @@ header {
   box-shadow: 0 2px 4px 4px rgba(0, 0, 0, .2);
 }
 
-.shadow-footer {
-  box-shadow: 2px 0 4px 4px rgba(0, 0, 0, .3);
-}
-
 .header-title {
   font-size: 2rem;
 }
@@ -197,7 +201,7 @@ header {
   padding-top: 60px;
 }
 
-.side-nav .close-button {
+.side-nav .nav-close-button {
   position: absolute;
   top: 15px;
   right: 25px;
@@ -293,6 +297,10 @@ footer {
 footer p {
   padding: 0px;
   margin: 0px;
+}
+
+.shadow-footer {
+  box-shadow: 2px 0 4px 4px rgba(0, 0, 0, .3);
 }
 
 /*################################ END #######################################*/
@@ -412,6 +420,7 @@ footer p {
   font-size: 2rem;
   text-align: center;
   padding: 1rem;
+  width: 100%%;
 }
 
 .session-QRcode-text {
@@ -422,7 +431,7 @@ footer p {
 
 .session-QRcode-text p {
   height: auto;
-  width: 10rem;
+  /* width: 10rem; */
 }
 
 /*################################ END #######################################*/
@@ -512,3 +521,59 @@ footer p {
                               TESTING GRAVEYARD
 
 ############################################################################ */
+
+
+#session-modal-background {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  /* height: 100%; */
+  background-color: rgba(0,0,0,0.7);
+  z-index: 1;
+}
+#session-modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  /* height: auto; */
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px 4px rgba(0, 0, 0, .3);
+}
+.session-button-modal-h1 {
+  font-size: 2.5rem;
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 25px;
+  right:50px;
+  width: 4rem;
+  text-decoration: none;
+  background-color: #f5f5f5;
+  color: inherit;
+  box-shadow: 0 2px 4px 4px rgba(0, 0, 0, .3);
+  transition: 0.3s;
+  border-radius: 5px;
+  border: 1px solid #268bcc;
+  font-size: 3rem;
+}
+
+.session-button-modal-text .modal-close-button {
+  padding: 20px;
+}
+.modal-close-icon {
+  font-size: 3rem;
+}
+.modal-close-button:hover {
+  color: #f5f5f5;
+  background-color: #268bcc;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
