@@ -16,7 +16,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="scripts/navigation_menu.js"></script>
   <script src="scripts/header.js"></script>
-  <script src="/scripts/sessionCopy.js"></script>
+  <script src="scripts/sessionCopy.js"></script>
 </head>
 
 <body>
@@ -26,9 +26,9 @@
   </div>
   <header id="header">
     <button class="menu-icon menu-icon-white" id="menu-button" onclick="openNav()">&#9776;</button>
-    <h1 class="header-title blue display-none" id="header-title">Socials</h1>
+    <h1 class="header-title blue display-none" id="header-title">Session</h1>
     <div id="mySidenav" class="side-nav hidden" onclick="closeNav()">
-      <button href="javascript:void(0)" class="close-button menu-link" onclick="closeNav()">&times;</button>
+      <button href="javascript:void(0)" class="nav-close-button menu-link" onclick="closeNav()">&times;</button>
       <ul class="side-nav-menu" onclick="closeNav()">
         <li><a class="menu-link menu-link-item" href="index.html">Home</a></li>
         <li><a class="menu-link menu-link-item" href="about.html">About</a></li>
@@ -59,12 +59,19 @@
       <img src="images/session_QRcode.png" alt="Session QR Code">
         </div>
         </div>
+          <span id="session-button-modal-text" class="display-none">Copied!</span>
         <div class="session-copy tooltip">
-      <button class="session-button link-style link-style-animation" id="session-button" onclick="sessionIDCopy()" onmouseout="outFunc()">
-        <span class="tool-tip-text" id="session-id">Copy to clipboard</span>
-        <span>My Session ID</span>
-      </button>
+      <button class="session-button link-style link-style-animation" id="session-button" onclick="sessionIDCopy()" onmouseover="hoverFunc()" onmouseout="outFunc()">
+        <span id="session-button-hover-text" class="display-none">Copy to clipboard</span>
+        <span id="session-button-text">My Session ID</span>
     </div>
+  </div>
+  <div id="session-modal-background" onclick="closeModal()">
+          <button href="javascript:void(0)" class="modal-close-button blue" onclick="closeModal()"><i class="fas fa-times modal-close-icon"></i></button>
+    <div id="session-modal-content" onclick="closeModal()">
+      <h1 class="session-button-modal-h1 session-button-modal-text">Copied!</h1>
+    </div>
+  </div>
   </main>
   <footer>
     <p>Made with Caffeine in Sydney</p>
