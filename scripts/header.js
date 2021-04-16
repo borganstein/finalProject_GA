@@ -9,12 +9,14 @@ window.onscroll = () => {
   const menuButton = document.getElementById('menu-button');
   const headerTitle = document.getElementById('header-title');
   const header = document.getElementById('header');
+  const heroH1 = document.querySelector('.hero-h1');
   // const heightOfHero = document.getElementById('hero-cover').clientHeight;
 
   if (window.scrollY) {
     menuButton.classList.remove('menu-icon-white')
     menuButton.classList.add('menu-icon-blue')
     headerTitle.classList.remove('display-none')
+    heroH1.style.display = 'none';
     header.classList.add('header-background-opacity')
     header.classList.add('shadow');
 
@@ -24,5 +26,6 @@ window.onscroll = () => {
     headerTitle.classList.add('display-none')
     header.classList.remove('header-background-opacity')
     header.classList.remove('shadow');
+    heroH1.style.display = 'flex';
   }
 }

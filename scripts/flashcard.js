@@ -75,7 +75,7 @@ function flipCardtoGerman() {
   const flashcardButtonGerman = document.querySelector("#flashcardButton-german");
   //
   flashcardBack.style.display = "none";
-  flashcardFront.style.display = "none";
+  flashcardFront.style.display = "block";
   flashcardButtonEnglish.style.display = "none";
   flashcardButtonGerman.style.display = "flex";
 }
