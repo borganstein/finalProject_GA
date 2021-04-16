@@ -312,10 +312,13 @@ footer p {
 ############################################################################# */
 /* ##### Main ###### */
 .hero-button {
-  background-color: transparent;
-  color: #cd5c5c;
+  background-color: #339071;
+  color: #f5f5f5;
   border: none;
   font-size: 3rem;
+  padding: 1rem 3rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .hero-button:active {
@@ -523,9 +526,10 @@ footer p {
 ############################################################################ */
 
 
-#session-modal-background {
+.modal-background {
   display: none;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   position: fixed;
   top: 0;
@@ -533,7 +537,7 @@ footer p {
   right: 0;
   left: 0;
   /* height: 100%; */
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0,0,0,0.8);
   z-index: 1;
 }
 #session-modal-content {
@@ -541,7 +545,7 @@ footer p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 40%;
+  width: 45%;
   /* height: auto; */
   background-color: #f5f5f5;
   border-radius: 5px;
@@ -554,26 +558,25 @@ footer p {
 .modal-close-button {
   position: absolute;
   top: 25px;
-  right:50px;
-  width: 4rem;
+  right:25px;
+  width: 2rem;
   text-decoration: none;
-  background-color: #f5f5f5;
-  color: inherit;
-  box-shadow: 0 2px 4px 4px rgba(0, 0, 0, .3);
+  background-color: transparent;
+  color: #f5f5f5;
   transition: 0.3s;
   border-radius: 5px;
-  border: 1px solid #268bcc;
-  font-size: 3rem;
+  border: none;
+  font-size: 1rem;
 }
 
 .session-button-modal-text .modal-close-button {
   padding: 20px;
 }
 .modal-close-icon {
-  font-size: 3rem;
+  font-size: 1rem;
 }
 .modal-close-button:hover {
-  color: #f5f5f5;
-  background-color: #268bcc;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  color: #268bcc;
+  background-color: #f5f5f5;
+  border: 1px solid #268bcc;
 }

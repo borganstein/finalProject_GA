@@ -1,5 +1,5 @@
 function sessionIDCopy() {
-  const modalDiv  = document.querySelector('#session-modal-background');
+  const modalDiv  = document.querySelector('.modal-background');
   const bodyContainer = document.querySelector("body"); // selects Body container
 
   navigator.clipboard.writeText('05577626bd543fbd9cc17239cdaf1e6c6e402e4f3ef4eb964b72f3c851f1d91c30');
@@ -25,8 +25,8 @@ function outFunc() {
 
 function closeModal() {
   const bodyContainer = document.querySelector("body"); // selects Body container
-  const modalDiv  = document.querySelector('#session-modal-background');
-  bodyContainer.classList.remove('interaction-disabled');
+  const modalDiv  = document.querySelector('.modal-background');
+  // bodyContainer.classList.remove('interaction-disabled');
   bodyContainer.classList.remove('stop-scroll');
   modalDiv.style.display = "none";
 }
