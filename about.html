@@ -26,15 +26,15 @@
   <header id="header">
     <button class="menu-icon menu-icon-white" id="menu-button" onclick="openNav()">&#9776;</button>
     <h1 class="header-title blue display-none" id="header-title">Socials</h1>
-    <div id="mySidenav" class="side-nav hidden">
+    <div id="mySidenav" class="side-nav hidden" onclick="closeNav()">
       <button href="javascript:void(0)" class="close-button menu-link" onclick="closeNav()">&times;</button>
-      <div class="side-nav-menu" onclick="closeNav()">
-        <a class="menu-link menu-link-item" href="index.html">Home</a>
-        <a class="menu-link menu-link-item" href="about.html" aria-current="page">About</a>
-        <a class="menu-link menu-link-item" href="socials.html">Socials</a>
-      </div>
+      <ul class="side-nav-menu" onclick="closeNav()">
+        <li><a class="menu-link menu-link-item" href="index.html">Home</a></li>
+        <li aria-current="page"><a class="menu-link menu-link-item" href="about.html">About</a></li>
+        <li><a class="menu-link menu-link-item" href="socials.html">Socials</a></li>
+      </ul>
       <div class="side-nav-menu-attribution">
-        <a class="menu-link menu-link-item side-nav-menu-attribution-text" href="https://bjorn.rostron.co">Made by Borganstein</a>
+        <a class="side-nav-menu-attribution-text" href="https://bjorn.rostron.co">Made by Borganstein</a>
       </div>
     </div>
   </header>

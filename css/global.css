@@ -9,9 +9,6 @@
   font-size: 16px;
 }
 
-/* main {
-  height: 1000px;
-} */
 body {
   position: relative;
   margin: 0px;
@@ -108,7 +105,7 @@ p {
   margin: 1rem;
 }
 
-/* ######### Hero Image ########## */
+/* ############################# Hero Image #################################*/
 .hero-cover {
   display: flex;
   flex-direction: column;
@@ -136,8 +133,7 @@ p {
   font-size: 2rem;
   color: lightgray;
 }
-
-/* ######### Header ######### */
+/* ############################### Header ###################################*/
 header {
   display: flex;
   justify-content: flex-start;
@@ -171,7 +167,7 @@ header {
   border: none;
 }
 
-/* ##### Used for JS ##### */
+/* ########################### Used for JS ################################# */
 .header-background-opacity {
   background-color: rgba(245, 245, 245, 0.9);
   width: 100%;
@@ -187,17 +183,15 @@ header {
   color: #268bcc;
 }
 
-/* ########## Side Menu CSS items ######## */
+/* ####################### Side Menu CSS items ############################## */
 .side-nav {
-  display: grid;
-  grid-template-columns: 1fr;
   height: 100%;
-  width: 100%;
+  width: 300px;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: rgba(38, 139, 204, 0.9);
+  background-color: rgba(38, 139, 204, 1);
   overflow-x: hidden;
   transition: 0.1s;
   padding-top: 60px;
@@ -205,23 +199,40 @@ header {
 
 .side-nav .close-button {
   position: absolute;
-  top: 0;
+  top: 15px;
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
 }
 
 .side-nav-menu {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding-left: 0; /*this gets rid of space where bullets would be */
+  text-align: left;
+  list-style: none;
+}
+
+.side-nav-menu li {
+  padding: 1.2rem 0.5rem;
+  margin: 0;
+  width: 100%;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  list-style: none;
+  -webkit-transition: all 300ms ease-in-out;
+         transition: all 300ms ease-in-out;
+}
+
+.side-nav-menu li:hover{
+  width: 100%;
+  background-color: rgba(0, 0, 0,0.3);
+  box-shadow: 0 2px 4px rgba(0, 0, 0,0.3);
+}
+.side-nav-menu li:focus {
+  width: 100%;
+  background-color: rgba(0, 0, 0,0.3);
+  box-shadow: 0 2px 4px rgba(0, 0, 0,0.3);
 }
 
 .menu-link {
-  display: flex;
-  justify-content: center;
-  padding: 8px;
   text-decoration: none;
   font-size: 2.5rem;
   color: #fff;
@@ -231,32 +242,39 @@ header {
 }
 
 .menu-link-item {
-  transform: scale(1.1);
+  width: 100%;
 }
 
 .side-nav-menu-attribution {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
+  position: fixed;
+  bottom: 0;
+  padding-bottom: 1rem;
 }
 
 .side-nav-menu-attribution-text {
-  justify-content: flex-end;
+  padding-left: 1rem;
   font-size: 1rem;
   color: #ffffff;
   background-color: transparent;
   border: none;
+  text-decoration: none;
+}
+
+.side-nav-menu-attribution-text:hover {
+  text-decoration: underline;
+  -webkit-transition: width 0.1s;
+         transition: width 0.1s;
+
 }
 
 [aria-current] {
-  font-weight: bold;
-  background-color: rgba(245, 245, 245, 0.9);
-  color: #268bcc;
-  border-radius: 5px;
+  width: 100%;
+  background-color: rgba(0, 0, 0,0.3);
+  box-shadow: 0 2px 4px rgba(0, 0, 0,0.3);
 }
 
-/* ########### Footer ########### */
+/* ############################# Footer ##################################### */
 footer {
   display: flex;
   align-items: center;
@@ -436,17 +454,15 @@ footer p {
     grid-gap: 0;
     width: 40%;
   }
+  /* ### About Page ### */
+  .photo-embed {
+    height: auto;
+    width: 500px;
+  }
+
+  /*Add new content before this comment*/
 }
 
-/* ### About Page ### */
-.photo-embed {
-  height: auto;
-  width: 500px;
-}
-
-/* .small-text {
-  font-size: 0.9rem;
-} */
 @media screen and (min-width: 970px) {
 
   /* Desktops */
@@ -466,19 +482,6 @@ footer p {
     font-size: 3rem;
   }
 
-  .menu-link {
-    padding: 8px;
-    font-size: 5rem;
-  }
-
-  .side-nav-menu-attribution-text {
-    font-size: 1.5rem;
-    font-weight: 400;
-  }
-
-  /*   .link-style {
-      width: 12rem; NOT WORKING
-  } */
   /* ##### About Page ###### */
   .about-text {
     padding: 0px 150px;
@@ -498,43 +501,13 @@ footer p {
     height: auto;
     width: 700px;
   }
+
+  /*Add new content before this comment*/
 }
 
 /*################################ END #######################################*/
-/* ########################################################## */
-/* TESTING CSS */
-/* #personal-site-link::after {
-  color: #268bcc;
-}
+/* ###########################################################################
 
-#personal-site-link:hover::after {
-  content: "Personal Site";
-  color: #f5f5f5;
-}
+                              TESTING GRAVEYARD
 
-#pro-site-link::after {
-  color: #268bcc;
-}
-
-#pro-site-link:hover::after {
-  content: "Professional Site";
-  color: #f5f5f5;
-}
-
-.test li:last-child {
-  display:none;
-}
-
-.test:hover {
-  cursor: pointer;
-}
-
-.test:hover li:first-child{
-	display: none;
-}
-
-.test:hover li:last-child{
-	display:block;
-  font-size: 2rem;
-}
- */
+############################################################################ */
