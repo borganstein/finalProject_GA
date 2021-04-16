@@ -3,7 +3,7 @@ function copysessionIDfunction() {
     var tooltip = document.getElementById("session-id");
     tooltip.innerHTML = "Copied!";
 }
- 
+
 
 /* --------------------------------------*/
 function outFunc() {

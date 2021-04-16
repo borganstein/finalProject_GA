@@ -16,6 +16,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="scripts/navigation_menu.js"></script>
   <script src="scripts/header.js"></script>
+  <script src="/scripts/sessionCopy.js"></script>
 </head>
 
 <body>
@@ -59,9 +60,9 @@
         </div>
         </div>
         <div class="session-copy tooltip">
-      <button class="session-button link-style link-style-animation" id="session-button" onclick="copysessionIDfunction()" onmouseout="outFunc()">
-        <span class="tooltiptext" id="session-id">Copy to clipboard</span>
-        My Session ID
+      <button class="session-button link-style link-style-animation" id="session-button" onclick="sessionIDCopy()" onmouseout="outFunc()">
+        <span class="tool-tip-text" id="session-id">Copy to clipboard</span>
+        <span>My Session ID</span>
       </button>
     </div>
   </main>
