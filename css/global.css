@@ -1,9 +1,9 @@
-/* ########## Global CSS ##########
+/* ############################################################################
 
-   Common CSS for all .html pages
+                                Global CSS
+                     Common CSS for all .html pages
 
-################################### */
-
+##############################################################################*/
 * {
   font-family: "Roboto Mono", monospace;
   font-size: 16px;
@@ -12,7 +12,6 @@
 /* main {
   height: 1000px;
 } */
-
 body {
   position: relative;
   margin: 0px;
@@ -23,13 +22,11 @@ body {
   background-color: #f5f5f5;
 }
 
-
 .main-positioning {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
-
 }
 
 a {
@@ -40,16 +37,17 @@ a {
 p {
   padding: 10px;
 }
+
 /* colors */
 .white {
   color: #f5f5f5;
 }
+
 .blue {
   color: #268bcc;
 }
 
 /*animation*/
-
 .display-none {
   display: none;
 }
@@ -75,7 +73,6 @@ p {
 }
 
 /* link & button styling with hover animation */
-
 .social-link-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -94,7 +91,7 @@ p {
   width: 100%;
 }
 
- .link-style {
+.link-style {
   border: 3px solid #268bcc;
   text-decoration: none;
   color: #268bcc;
@@ -102,10 +99,9 @@ p {
 }
 
 .link-style:hover, .link-style:focus {
-  background-color:  #268bcc;
-  color:#f5f5f5;
+  background-color: #268bcc;
+  color: #f5f5f5;
 }
-
 
 .link-style-icon {
   font-size: 4rem;
@@ -113,7 +109,6 @@ p {
 }
 
 /* ######### Hero Image ########## */
-
 .hero-cover {
   display: flex;
   flex-direction: column;
@@ -125,7 +120,8 @@ p {
   background-repeat: no-repeat;
   height: 100vh;
   padding: 15px;
-  z-index: 1;<div id="map"></div>
+  z-index: 1;
+  <div id="map"></div>
 }
 
 .hero-h1 {
@@ -137,12 +133,11 @@ p {
 }
 
 .hero-h3 {
-font-size: 2rem;
-color: lightgray;
+  font-size: 2rem;
+  color: lightgray;
 }
 
 /* ######### Header ######### */
-
 header {
   display: flex;
   justify-content: flex-start;
@@ -154,6 +149,14 @@ header {
   z-index: 1;
   position: fixed;
   top: 0px;
+}
+
+.shadow {
+  box-shadow: 0 2px 4px 4px rgba(0, 0, 0, .2);
+}
+
+.shadow-footer {
+  box-shadow: 2px 0 4px 4px rgba(0, 0, 0, .3);
 }
 
 .header-title {
@@ -169,7 +172,6 @@ header {
 }
 
 /* ##### Used for JS ##### */
-
 .header-background-opacity {
   background-color: rgba(245, 245, 245, 0.9);
   width: 100%;
@@ -186,7 +188,6 @@ header {
 }
 
 /* ########## Side Menu CSS items ######## */
-
 .side-nav {
   display: grid;
   grid-template-columns: 1fr;
@@ -248,15 +249,14 @@ header {
   border: none;
 }
 
- [aria-current] {
-   font-weight: bold;
-   background-color: rgba(245,245,245,0.9);
-   color: #268bcc;
-   border-radius: 5px;
-  }
+[aria-current] {
+  font-weight: bold;
+  background-color: rgba(245, 245, 245, 0.9);
+  color: #268bcc;
+  border-radius: 5px;
+}
 
 /* ########### Footer ########### */
-
 footer {
   display: flex;
   align-items: center;
@@ -276,14 +276,14 @@ footer p {
   margin: 0px;
 }
 
-/* ########## Home Page CSS ##########
+/*################################ END #######################################*/
+/* ############################################################################
 
-   CSS for the Home Page
+                                Home Page CSS
+                             CSS for the Home Page
 
-################################### */
-
+############################################################################# */
 /* ##### Main ###### */
-
 .hero-button {
   background-color: transparent;
   color: #cd5c5c;
@@ -292,15 +292,17 @@ footer p {
 }
 
 .hero-button:active {
-  transform: scale(1.1); /* Testing out button animation - callouts */
+  transform: scale(1.1);
+  /* Testing out button animation - callouts */
 }
 
-/* ########## About Page CSS ##########
+/*################################ END #######################################*/
+/* ############################################################################
 
-   CSS for the About Page
+                            About Page CSS
+                         CSS for the About Page
 
-################################### */
-
+############################################################################# */
 .about-intro-text {
   margin: 0px;
   text-align: center;
@@ -313,9 +315,10 @@ footer p {
   text-align: center;
   font-size: 3rem;
 }
+
 .about-text {
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   align-items: center;
   width: 100%;
 }
@@ -332,14 +335,16 @@ footer p {
 
 .photo-embed {
   height: auto;
-  width: 500px;
+  width: 350px;
 }
 
-/* ########## Social Page CSS ##########
+/*################################ END #######################################*/
+/* ############################################################################
 
-   CSS for the socials Page
+                            Social Page CSS
+                            CSS for the socials Page
 
-################################### */
+############################################################################# */
 
 .social-h3 {
   text-align: center;
@@ -347,11 +352,14 @@ footer p {
   margin-top: 5rem;
 }
 
-/* ########## Session Page CSS ##########
+/*################################ END #######################################*/
+/* ############################################################################
 
-   CSS for the Sesssion Page
+                            Session Page CSS
+                            CSS for the Sesssion Page
 
-################################### */
+
+############################################################################# */
 
 .session-title {
   text-align: center;
@@ -398,53 +406,66 @@ footer p {
   width: 10rem;
 }
 
-/* ########## CSS ##########
+/*################################ END #######################################*/
+/* ############################################################################
 
-  Responsive Page Points
+                                    CSS
+                            Responsive Page Points
 
-################################### */
+############################################################################# */
 
 @media screen and (min-width: 750px) {
+
   /* Tablets */
   .hero-cover {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
       url(../images/holgersson-unsplash.jpg);
   }
+
   .social-links {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 0.5rem;
   }
-   .link-style {
- padding: 2rem 8rem;
-}
+
+  .link-style {
+    padding: 2rem 8rem;
+  }
+
   .social-link-item {
     grid-gap: 0;
     width: 40%;
   }
 }
 
+/* ### About Page ### */
+.photo-embed {
+  height: auto;
+  width: 500px;
+}
+
 /* .small-text {
   font-size: 0.9rem;
 } */
-
 @media screen and (min-width: 970px) {
+
   /* Desktops */
-
   /* ##### Global CSS */
-
   .hero-cover {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
       url(../images/holgersson-unsplash.jpg);
   }
+
   .hero-h1 {
     margin: 10px;
     font-size: 6rem;
     color: lightgray;
   }
+
   .menu-icon {
     font-size: 3rem;
   }
+
   .menu-link {
     padding: 8px;
     font-size: 5rem;
@@ -455,12 +476,10 @@ footer p {
     font-weight: 400;
   }
 
-/*   .link-style {
+  /*   .link-style {
       width: 12rem; NOT WORKING
   } */
-
   /* ##### About Page ###### */
-
   .about-text {
     padding: 0px 150px;
   }
@@ -469,17 +488,21 @@ footer p {
     grid-template-columns: 1fr 1fr;
     margin: 2.5rem 2.5rem;
   }
-    .social-link-item {
+
+  .social-link-item {
     grid-gap: 0;
     width: 40%;
   }
+
+  .photo-embed {
+    height: auto;
+    width: 700px;
+  }
 }
 
+/*################################ END #######################################*/
 /* ########################################################## */
-
-
 /* TESTING CSS */
-
 /* #personal-site-link::after {
   color: #268bcc;
 }
