@@ -77,6 +77,10 @@ p {
   visibility: visible;
 }
 
+.shadow {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.9);
+}
+
 /* link & button styling with hover animation */
 .social-link-grid {
   display: grid;
@@ -376,7 +380,18 @@ footer p {
 .photo-embed {
   height: auto;
   width: 350px;
+  Z-index:-1;
+  filter: grayscale(1);
+  transition: filter 200ms ease, transform 250ms linear;
 }
+
+.photo-container:hover img,
+.photo-container:focus img {
+  filter: grayscale(0);
+  transform: scale(1.05) rotate(1deg);
+}
+
+
 
 /*################################ END #######################################*/
 /* ############################################################################
