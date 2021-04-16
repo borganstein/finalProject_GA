@@ -169,7 +169,7 @@ header {
 
 /* ########################### Used for JS ################################# */
 .header-background-opacity {
-  background-color: rgba(245, 245, 245, 0.9);
+  background-color: rgba(245, 245, 245, 1);
   width: 100%;
 }
 
