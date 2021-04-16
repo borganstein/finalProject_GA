@@ -431,7 +431,7 @@ footer p {
 
 .session-QRcode-text p {
   height: auto;
-  width: 10rem;
+  /* width: 10rem; */
 }
 
 /*################################ END #######################################*/
