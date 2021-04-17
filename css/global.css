@@ -208,24 +208,28 @@ header {
   background-color: rgba(38, 139, 204, 1);
   overflow-x: hidden;
   transition: 0.1s;
-  padding-top: 60px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.9)
 }
 
 .side-nav .nav-close-button {
-  position: absolute;
-  top: 15px;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+  /* position: absolute; */
+  /* top: 15px;
+  right: 15px; */
+  font-size: 2rem;
+  margin-left: 3rem;
 }
 
 .side-nav-menu {
+  display: grid;
+  grid-template-columns: 1fr;
+  /* grid-gap: 10px; */
   padding-left: 0; /*this gets rid of space where bullets would be */
   text-align: left;
   list-style: none;
+  margin-top: 2rem;
 }
 
-.side-nav-menu li {
+.side-nav-menu a {
   padding: 1.2rem 0.5rem;
   margin: 0;
   width: 100%;
@@ -235,28 +239,25 @@ header {
          transition: all 300ms ease-in-out;
 }
 
-.side-nav-menu li:hover{
+.side-nav-menu a:hover{
   width: 100%;
   background-color: rgba(0, 0, 0,0.3);
   box-shadow: 0 2px 4px rgba(0, 0, 0,0.3);
 }
-.side-nav-menu li:focus {
+.side-nav-menu a:focus {
   width: 100%;
   background-color: rgba(0, 0, 0,0.3);
   box-shadow: 0 2px 4px rgba(0, 0, 0,0.3);
 }
 
-.menu-link {
+.menu-link-item {
+  width: 100%;
   text-decoration: none;
   font-size: 2.5rem;
   color: #fff;
   background-color: transparent;
   transition: 0.3s;
   border: none;
-}
-
-.menu-link-item {
-  width: 100%;
 }
 
 .side-nav-menu-attribution {
