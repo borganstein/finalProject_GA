@@ -28,18 +28,19 @@
   </div>
   <header id="header">
     <button class="menu-icon menu-icon-white" id="menu-button" onclick="openNav()">&#9776;</button>
-    <h1 class="header-title blue display-none" id="header-title">LearnGerman</h1>
+    <h1 class="header-title blue display-none" id="header-title">About</h1>
     <div id="mySidenav" class="side-nav hidden" onclick="closeNav()">
-      <button href="javascript:void(0)" class="close-button menu-link" onclick="closeNav()">&times;</button>
-      <ul class="side-nav-menu" onclick="closeNav()">
-        <li aria-current="page"><a class="menu-link menu-link-item" href="index.html">Home</a></li>
-        <li><a class="menu-link menu-link-item" href="about.html">About</a></li>
-        <li><a class="menu-link menu-link-item" href="socials.html">Socials</a></li>
-      </ul>
+      <button href="javascript:void(0)" class="close-button menu-link-item" onclick="closeNav()">&times;</button>
+      <div class="side-nav-menu" onclick="closeNav()">
+        <!-- Went with a tags because when I used ul and li the clickable portion wouldn't reach the entire field -->
+        <a aria-current="page" class="menu-link-item" href="index.html">Home</a>
+        <a class="menu-link-item" href="about.html">About</a>
+        <a class="menu-link-item" href="socials.html">Socials</a>
       <div class="side-nav-menu-attribution">
-        <a class="menu-link menu-link-item side-nav-menu-attribution-text" href="https://bjorn.rostron.co">Made by Borganstein</a>
+        <a class="side-nav-menu-attribution-text" href="https://bjorn.rostron.co">Made by Borganstein</a>
       </div>
     </div>
+  </div>
   </header>
   <main class="main-positioning">
     <h1>Why Flashcards?</h1>
@@ -52,13 +53,11 @@
       <button href="javascript:void(0)" class="modal-close-button blue" onclick="closeModal()"><i class="fas fa-times modal-close-icon"></i></button>
       <div class="flashcard" id="flashcard">
         <button id="flashcard-front" onclick="flipCardtoEnglish()">
-          <!-- <h1>German</h1> -->
           <div id="flashcard-german" class="flashcard-text">
             <!-- german word goes here -->
           </div>
         </button>
         <button id="flashcard-back" onclick="flipCardtoGerman()">
-          <!-- <h1>English</h1> -->
           <div id="flashcard-english" class="flashcard-text">
             <!-- english word goes here -->
           </div>
