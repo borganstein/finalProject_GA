@@ -209,6 +209,7 @@ header {
   overflow-x: hidden;
   transition: 0.1s;
   padding-top: 60px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.9)
 }
 
 .side-nav .nav-close-button {
