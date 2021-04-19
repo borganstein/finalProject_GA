@@ -375,10 +375,10 @@ footer p {
   padding: 0rem 1rem;
 }
 
-.photo-container {
-  display: flex;
+/* .photo-container {
+  display: box;
   justify-content: center;
-}
+} */
 
 .photo-embed {
   height: auto;
