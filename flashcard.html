@@ -16,8 +16,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <script src="scripts/header.js"></script>
-  <script src="scripts/flashcard.js"></script>
-
 </head>
 
 <body>
@@ -25,7 +23,7 @@
     <h1 class="hero-h1">Flashcard</h1>
   </div>
   <header id="header">
-    <button class="menu-icon menu-icon-white" id="menuButton">&#9776;</button>
+    <button class="menu-icon menu-icon-white"><i class="menu-icon menu-icon-white fad fa-bars" id="menuButton"></i></button>
     <h1 class="header-title blue display-none" id="headerTitle">Flashcard</h1>
     <div id="mySidenav" class="side-nav hidden">
       <button href="javascript:void(0)" class="close-button menu-link-item" id="closeButton">&times;</button>
@@ -34,35 +32,45 @@
         <a class="menu-link menu-link-item" href="flashcard.html">Flashcard</a>
         <a aria-current="page" class="menu-link menu-link-item" href="about.html">About</a>
         <a class="menu-link menu-link-item" href="socials.html">Socials</a>
-      <div class="side-nav-menu-attribution">
-        <a class="side-nav-menu-attribution-text" href="https://bjorn.rostron.co">Made by Borganstein</a>
+        <div class="side-nav-menu-attribution">
+          <a class="side-nav-menu-attribution-text" href="https://bjorn.rostron.co">Made by Borganstein</a>
+        </div>
       </div>
     </div>
-  </div>
   </header>
-  <main class="main-positioning">
-      <button href="javascript:void(0)" class="modal-close-button blue" onclick="closeModal()"><i class="fas fa-times modal-close-icon"></i></button>
-      <div class="flashcard" id="flashcard">
-        <button id="flashcard-front" onclick="flipCardtoEnglish()">
-          <div id="flashcard-german" class="flashcard-text">
+  <main class="main-positioning" id="mainFlashcardContainer">
+        <button id="flipButton">Random German Word</button>
+    <div class="flashcard-container" ontouchstart="this.classList.toggle('hover');">
+      <div class="flashcard">
+        <div class="flashcardFront" id="flashcardGerman">
             <h3>German</h3>
-            <!-- german word goes here -->
+            <p class="flashcard-text" id="flashcardGermanText"></p>
           </div>
-        </button>
-        <button id="flashcard-back" onclick="flipCardtoGerman()">
-          <div id="flashcard-english" class="flashcard-text">
+        <div class="flashcardBack" id="flashcardEnglish">
             <h3>English</h3>
-            <!-- english word goes here -->
+            <p class="flashcard-text" id="flashcardEnglishText"></p>
           </div>
-        </button>
+        </div>
       </div>
-      <button id="flashcardButton-german">German</button>
-      <button id="flashcardButton-english">English</button>
-      <button id="flipButton" onclick="flipcardButton()">Flip</button>
+    <!--  <div class="flashcard" id="flashcard">
+
+          <div id="flashcardGerman" class="front flashcard-text">
+            <h3>German</h3>
+             german word goes here
+          </div>
+
+          <div id="flashcardEnglish" class="back flashcard-text">
+            <h3>English</h3>
+             english word goes here
+          </div>
+      </div> -->
+
   </main>
   <footer>
     <p>Made with Caffeine in Sydney</p>
   </footer>
 </body>
 <script src="scripts/navigation_menu.js"></script>
+<script src="scripts/flashcard.js"></script>
+
 </html>

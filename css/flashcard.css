@@ -1,67 +1,123 @@
-/* Flashcard css */
+/* ##########################################################################
 
+credit
+https://davidwalsh.name/css-flip
+https://www.w3schools.com/howto/howto_css_animate_buttons.asp
 
-#flashcardButton-german {
+############################################################################*/
+.mainFlashcardContainer {
   display: flex;
-  margin: 1rem;
-  padding: 1.5rem;
-  font-size: 1.8rem;
-  font-weight: 800;
+  justify-content: space-between;
+}
+
+#flipButton {
+  position: relative;
+  background-color: #268bcc;
+  border: 1px solid #268bcc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
+  margin: 3rem;
+  font-size: 2rem;
+  color: #F5F5F5;
+  padding: 1rem;
+  width: 30rem;
+  text-align: center;
+  -webkit-transition-duration: 0.4s;  /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#flipButton:hover, #flipButton:focus {
   background-color: #f5f5f5;
   color: #268bcc;
-  border: 3px solid #268bcc;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(38, 139, 204, 0.3);
+  border: 1px solid #268bcc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
 }
 
-#flashcardButton-english {
-  display: none;
-  margin: 1rem;
-  padding: 1.5rem;
-  font-size: 1.8rem;
-  font-weight: 800;
+#flipButton:after {
+  content: "";
+  background: #268bcc;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+#flipButton:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+/* entire container, keeps perspective */
+.flashcard-container {
+  perspective: 1000px;
+}
+
+.flashcard-container H3 {
+  font-size: 2.5rem;
+}
+
+/* flip the pane when hovered */
+.flashcard-container:hover .flashcard, .flashcard-container.hover .flashcard {
+  transform: rotateY(180deg);
+}
+
+.flashcard-container, .flashcardFront, .flashcardBack {
+  width: 320px;
+  height: 480px;
+}
+
+/* flip speed goes here */
+.flashcard {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+/* hide back of pane during swap */
+.flashcardFront, .flashcardBack {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* front pane, placed above back */
+.flashcardFront {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 2;
   background-color: #268bcc;
+  border: 2px solid #f5f5f5;
   color: #f5f5f5;
-  border: 3px solid #268bcc;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(38, 139, 204, 0.3);
+  /* for firefox 31 */
+  transform: rotateY(0deg);
 }
 
-
-#flashcard-front {
-  display: none;
+/* back, initially hidden pane */
+.flashcardBack {
+  display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
-
+  background-color: #f5f5f5;
   border: 2px solid #268bcc;
-  border-radius: 5px;
-
-  background-color:#f5f5f5;
   color: #268bcc;
-
-  height: 200px;
-  width: 300px;
-}
-
-
-#flashcard-back {
-  display: none;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-
-  border: 2px solid #268bcc;
-  border-radius: 5px;
-
-  background-color:#268bcc;
-  color: #f5f5f5;
-
-  height: 200px;
-  width: 300px;
+  transform: rotateY(180deg);
 }
 
 .flashcard-text {
   font-size: 1.7rem;
-  overflow-wrap: break-word; /*trying to wrap the words onto 2 lines */
+  text-align: center;
+  overflow-wrap: break-word;
+  /*trying to wrap the words onto 2 lines
 }
