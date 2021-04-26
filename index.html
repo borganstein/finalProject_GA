@@ -17,7 +17,6 @@
   <script src="https://kit.fontawesome.com/f2c6109eb3.js" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="scripts/header.js"></script>
-  <script src="scripts/flashcard.js"></script>
 </head>
 
 <body>
@@ -29,14 +28,15 @@
     <button class="menu-icon menu-icon-white"><i class="menu-icon menu-icon-white fad fa-bars" id="menuButton"></i></button>
     <h1 class="header-title blue display-none" id="headerTitle">Learn German</h1>
     <div id="mySidenav" class="side-nav hidden">
-      <button href="javascript:void(0)" class="close-button menu-link-item" id="closeButton">&times;</button>
+      <div class="menu-button-area"><button href="javascript:void(0)" class="nav-close-button" id="closeButton"><i class="fal fa-times close-icon"></i></button></div>
       <div class="side-nav-menu">
         <!-- Went with a tags because when I used ul and li the clickable portion wouldn't reach the entire field -->
-        <a aria-current="page" class="menu-link-item" href="index.html">Home</a>
-        <a class="menu-link-item" href="about.html">About</a>
-        <a class="menu-link-item" href="socials.html">Socials</a>
+        <a aria-current="page" class="menu-link menu-link-item" href="index.html">Home</a>
+        <a class="menu-link menu-link-item" href="flashcard.html">Flashcard</a>
+        <a class="menu-link menu-link-item" href="about.html">About</a>
+        <a class="menu-link menu-link-item" href="socials.html">Socials</a>
       <div class="side-nav-menu-attribution">
-        <a class="side-nav-menu-attribution-text" href="https://bjorn.rostron.co">Made by Borganstein</a>
+        <a id="side-nav-menu-attribution-text" href="https://bjorn.rostron.co">Made by Borganstein</a>
       </div>
     </div>
   </div>
