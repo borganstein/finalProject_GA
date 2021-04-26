@@ -8,28 +8,32 @@
   <!-- Stylesheets -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" crossorigin="anonymous" />
   <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/flashcard.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-
   <!-- Scripts-->
   <script src="https://kit.fontawesome.com/f2c6109eb3.js" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
   <script src="scripts/header.js"></script>
+  <script src="scripts/flashcard.js"></script>
+
 </head>
 
 <body>
   <div class="hero-cover" id="hero-cover">
-    <h1 class="hero-h1">Socials</h1>
+    <h1 class="hero-h1">Flashcard</h1>
   </div>
   <header id="header">
     <button class="menu-icon menu-icon-white" id="menuButton">&#9776;</button>
-    <h1 class="header-title blue display-none" id="headerTitle">Socials</h1>
+    <h1 class="header-title blue display-none" id="headerTitle">Flashcard</h1>
     <div id="mySidenav" class="side-nav hidden">
       <button href="javascript:void(0)" class="close-button menu-link-item" id="closeButton">&times;</button>
       <div class="side-nav-menu">
         <a class="menu-link menu-link-item" href="index.html">Home</a>
-        <a class="menu-link menu-link-item" href="about.html">About</a>
-        <a aria-current="page" class="menu-link menu-link-item" href="socials.html">Socials</a>
+        <a class="menu-link menu-link-item" href="flashcard.html">Flashcard</a>
+        <a aria-current="page" class="menu-link menu-link-item" href="about.html">About</a>
+        <a class="menu-link menu-link-item" href="socials.html">Socials</a>
       <div class="side-nav-menu-attribution">
         <a class="side-nav-menu-attribution-text" href="https://bjorn.rostron.co">Made by Borganstein</a>
       </div>
@@ -37,34 +41,28 @@
   </div>
   </header>
   <main class="main-positioning">
-    <h3 class="social-h3">Social Links</h3>
-    <div class="social-link-grid">
-      <div class="social-link-item">
-        <a title="personal-site" class="social-link link-style" href="https://bjorn.rostron.co"><i class="fas fa-user-circle link-style-icon"></i></a>
+      <button href="javascript:void(0)" class="modal-close-button blue" onclick="closeModal()"><i class="fas fa-times modal-close-icon"></i></button>
+      <div class="flashcard" id="flashcard">
+        <button id="flashcard-front" onclick="flipCardtoEnglish()">
+          <div id="flashcard-german" class="flashcard-text">
+            <h3>German</h3>
+            <!-- german word goes here -->
+          </div>
+        </button>
+        <button id="flashcard-back" onclick="flipCardtoGerman()">
+          <div id="flashcard-english" class="flashcard-text">
+            <h3>English</h3>
+            <!-- english word goes here -->
+          </div>
+        </button>
       </div>
-        <div class="social-link-item">
-          <a title="professional-site" class="social-link link-style" href="https://transcendingdigital.space"><i class="fas fa-globe link-style-icon"></i></a>
-        </div>
-      <div class="social-link-item">
-        <a title="twitter" class="social-link link-style" href="https://twitter.com/borganstein"><i class="fab fa-twitter link-style-icon"></i></a>
-      </div>
-      <div class="social-link-item">
-        <a title="email" class="social-link link-style" href="mailto:german@transcendingdigital.space" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope link-style-icon"></i></a>
-      </div>
-      <div class="social-link-item">
-        <a title="linkedin" class="social-link link-style small-text" href="https://linkedin/in/bjornrostron"><i class="fab fa-linkedin link-style-icon"></i></a>
-      </div>
-      <div class="social-link-item">
-        <a title="session-messenger" class="social-link link-style" href="sessionmessenger.html"><i class="fas fa-comment-alt link-style-icon"></i></a>
-      </div>
-    </div>
+      <button id="flashcardButton-german">German</button>
+      <button id="flashcardButton-english">English</button>
+      <button id="flipButton" onclick="flipcardButton()">Flip</button>
   </main>
-
   <footer>
     <p>Made with Caffeine in Sydney</p>
   </footer>
 </body>
 <script src="scripts/navigation_menu.js"></script>
 </html>
-
-<!-- ########## Testing graveyard ########### -->

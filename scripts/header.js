@@ -6,9 +6,9 @@
 // ############################################################################
 
 window.onscroll = () => {
-  const menuButton = document.getElementById('menu-button');
-  const headerTitle = document.getElementById('header-title');
-  const header = document.getElementById('header');
+  const menuButton = document.querySelector('#menuButton');
+  const headerTitle = document.querySelector('#headerTitle');
+  const header = document.querySelector('#header');
   const heroH1 = document.querySelector('.hero-h1');
   // const heightOfHero = document.getElementById('hero-cover').clientHeight;
 

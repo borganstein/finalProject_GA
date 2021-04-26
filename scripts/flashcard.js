@@ -1,3 +1,10 @@
+//
+//
+
+// https://stackoverflow.com/questions/6348494/addeventlistener-vs-onclick
+
+
+
 //Code for opening the modal to fade out background
 
 function openModal() {
@@ -7,6 +14,7 @@ function openModal() {
   bodyContainer.classList.add('stop-scroll');
 
 }
+
 function closeModal() {
   //declaring variables for readability of code
   const flashcardBack = document.querySelector("#flashcard-back");
@@ -30,6 +38,7 @@ function closeModal() {
 const german = ["der Stern", "der Berg", "der Stuhl", "der Wissenschaftler"]; //obv. the german list of words
 const english = ["The Star", "The Mountain", "The Chair", "The Scientist"]; //obv. the matched english set of words
 var english_randomNumber = []; //an object to store the randomNumber generated to link german to english lists
+
 
 function flipcardButton() {
   //declaring variables for readability of code

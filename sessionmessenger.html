@@ -14,7 +14,6 @@
   <!-- Scripts-->
   <script src="https://kit.fontawesome.com/f2c6109eb3.js" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="scripts/navigation_menu.js"></script>
   <script src="scripts/header.js"></script>
   <script src="scripts/sessionCopy.js"></script>
 </head>
@@ -24,11 +23,11 @@
     <h1 class="hero-h1">Session <span class="hero-h3">Messenger</span></h1>
   </div>
   <header id="header">
-    <button class="menu-icon menu-icon-white" id="menu-button" onclick="openNav()">&#9776;</button>
-    <h1 class="header-title blue display-none" id="header-title">Session</h1>
-    <div id="mySidenav" class="side-nav hidden" onclick="closeNav()">
-      <button href="javascript:void(0)" class="close-button menu-link-item" onclick="closeNav()">&times;</button>
-      <div class="side-nav-menu" onclick="closeNav()">
+    <button class="menu-icon menu-icon-white" id="menuButton">&#9776;</button>
+    <h1 class="header-title blue display-none" id="headerTitle">Session</h1>
+    <div id="mySidenav" class="side-nav hidden">
+      <button href="javascript:void(0)" class="close-button menu-link-item" id="closeButton">&times;</button>
+      <div class="side-nav-menu">
         <a class="menu-link menu-link-item" href="index.html">Home</a>
         <a class="menu-link menu-link-item" href="about.html">About</a>
         <a class="menu-link menu-link-item" href="socials.html">Socials</a>
@@ -76,5 +75,5 @@
     <p>Made with Caffeine in Sydney</p>
   </footer>
 </body>
-
+<script src="scripts/navigation_menu.js"></script>
 </html>
