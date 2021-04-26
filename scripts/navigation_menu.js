@@ -1,4 +1,3 @@
-
 const mainContainer = document.querySelector("main"); // selects Main container
 const bodyContainer = document.querySelector("body"); // selects Body container
 const menuLink = document.querySelectorAll(".menu-link"); //querySelectorAll returns a list
@@ -8,6 +7,7 @@ const menuButton = document.querySelector("#menuButton");
 const closeButton = document.querySelector('#closeButton');
 
 // ####################### Navigation Menu JS #####################
+
 function openNav() {
   // setting variables for use within function
   sideMenu.classList.remove('hidden'); // removes .hidden class from sidemenu
@@ -30,8 +30,9 @@ function closeNav() {
   socialLink.forEach(element => element.tabIndex = "0"); //uses forEach to iterate through array to add tabIndex=0 to all elements with class .social-link
   menuLink.forEach(element => element.tabIndex = "-1"); //uses forEach to iterate through array to add tabIndex=-1 to all elements with class .menu-link
 };
+// #############################################################
 
-//################## Click Listener ###################
+//################## Click Listeners ###################
 
 menuButton.addEventListener('click', openNav);
 closeButton.addEventListener("click", closeNav);
