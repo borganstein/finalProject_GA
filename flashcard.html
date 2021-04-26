@@ -1,55 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <!--  Meta  -->
-  <meta charset="UTF-8">
-  <title>Learning German</title>
+  <title>Learn German</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
 
-  <!--  Styles  -->
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" crossorigin="anonymous" />
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/flashcard.css">
-  <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-  <!--   scripts -->
+  <!-- Scripts-->
   <script src="https://kit.fontawesome.com/f2c6109eb3.js" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
   <script src="scripts/header.js"></script>
   <script src="scripts/flashcard.js"></script>
+
 </head>
 
 <body>
   <div class="hero-cover" id="hero-cover">
-    <h1 class="hero-h1">Learning<br>German</h1>
-
+    <h1 class="hero-h1">Flashcard</h1>
   </div>
   <header id="header">
     <button class="menu-icon menu-icon-white" id="menuButton">&#9776;</button>
-    <h1 class="header-title blue display-none" id="header-title">Learn German</h1>
+    <h1 class="header-title blue display-none" id="header-title">Flashcard</h1>
     <div id="mySidenav" class="side-nav hidden">
       <button href="javascript:void(0)" class="close-button menu-link-item" id="closeButton">&times;</button>
       <div class="side-nav-menu">
-        <!-- Went with a tags because when I used ul and li the clickable portion wouldn't reach the entire field -->
-        <a aria-current="page" class="menu-link-item" href="index.html">Home</a>
-        <a class="menu-link-item" href="about.html">About</a>
-        <a class="menu-link-item" href="socials.html">Socials</a>
+        <a class="menu-link menu-link-item" href="index.html">Home</a>
+        <a class="menu-link menu-link-item" href="flashcard.html">Flashcard</a>
+        <a aria-current="page" class="menu-link menu-link-item" href="about.html">About</a>
+        <a class="menu-link menu-link-item" href="socials.html">Socials</a>
       <div class="side-nav-menu-attribution">
         <a class="side-nav-menu-attribution-text" href="https://bjorn.rostron.co">Made by Borganstein</a>
       </div>
     </div>
   </div>
-  <script src="scripts/navigation_menu.js"></script>
+    <script src="scripts/navigation_menu.js"></script>
   </header>
   <main class="main-positioning">
-    <h1>Why Flashcards?</h1>
-    <p>The scientific research suggests that the use of flashcards can dramatically improve memory retention as well as spontaneous recall. This makes it perfect for learning a new language. It hits those parts of the brain that are crucial in being
-      able to learn a new language (or an old one!).</p>
-    <p>It was a handy way of using simple javascript to showcase what I have learnt.</p>
-    <p>My German is a little bit rusty and I thought that using flashcards to help embed those German words in such a way that they can be easily recalled.</p>
-    <p>So please enjoy, have a bit of fun and let me know if I can make any improvements, you can find my contact details <a href="socials.html">here.</a></p>
-    <a class="hero-button" href="flashcard.html">Start</a>
+      <button href="javascript:void(0)" class="modal-close-button blue" onclick="closeModal()"><i class="fas fa-times modal-close-icon"></i></button>
+      <div class="flashcard" id="flashcard">
+        <button id="flashcard-front" onclick="flipCardtoEnglish()">
+          <div id="flashcard-german" class="flashcard-text">
+            <h3>German</h3>
+            <!-- german word goes here -->
+          </div>
+        </button>
+        <button id="flashcard-back" onclick="flipCardtoGerman()">
+          <div id="flashcard-english" class="flashcard-text">
+            <h3>English</h3>
+            <!-- english word goes here -->
+          </div>
+        </button>
+      </div>
+      <button id="flashcardButton-german">German</button>
+      <button id="flashcardButton-english">English</button>
+      <button id="flipButton" onclick="flipcardButton()">Flip</button>
   </main>
   <footer>
     <p>Made with Caffeine in Sydney</p>
