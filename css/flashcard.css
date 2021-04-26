@@ -21,8 +21,10 @@ https://www.w3schools.com/howto/howto_css_animate_buttons.asp
   padding: 1rem;
   width: 30rem;
   text-align: center;
+
   -webkit-transition-duration: 0.4s;  /* Safari */
   transition-duration: 0.4s;
+
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;
@@ -48,7 +50,7 @@ https://www.w3schools.com/howto/howto_css_animate_buttons.asp
   transition: all 0.8s
 }
 
-#flipButton:active:after {
+#flipButton:active:after {flashcardFront.style.background()
   padding: 0;
   margin: 0;
   opacity: 1;
