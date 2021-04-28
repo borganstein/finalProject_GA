@@ -85,6 +85,7 @@ https://www.w3schools.com/howto/howto_css_animate_buttons.asp
 
 /* hide back of pane during swap */
 .flashcardFront, .flashcardBack {
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   position: absolute;
   top: 0;

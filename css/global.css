@@ -35,51 +35,14 @@ p {
   padding: 10px;
 }
 
-/* .bold {
-  font-style: bold;
-} */
 /* colors */
-.white {
+/* .white {
   color: #f5f5f5;
 }
 
 .blue {
   color: #268bcc;
-}
-
-/*animation*/
-.display-none {
-  display: none;
-}
-
-.display {
-  display: block;
-}
-
-.stop-scroll {
-  overflow-y: hidden;
-}
-
-.interaction-disabled {
-  pointer-events: none;
-}
-
-.interaction-enabled {
-  pointer-events: auto;
-}
-
-.hidden {
-  visibility: hidden;
-}
-
-.visible {
-  visibility: visible;
-}
-
-.shadow {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
-}
-
+} */
 /* link & button styling with hover animation */
 .social-link-grid {
   display: grid;
@@ -104,12 +67,14 @@ p {
   text-decoration: none;
   color: #268bcc;
   padding: 2rem 2rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9)
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
+  transition: all 300ms ease-in-out;
 }
 
 .link-style:hover, .link-style:focus {
   background-color: #268bcc;
   color: #f5f5f5;
+  transform: rotate(1deg);
 }
 
 .link-style-icon {
@@ -146,6 +111,7 @@ p {
   text-shadow: 2px 2px black;
   text-transform: uppercase;
   text-align: center;
+  transition: all 200ms ease-in;
 }
 
 .hero-h3 {
@@ -165,10 +131,13 @@ header {
   z-index: 1;
   position: fixed;
   top: 0px;
+  width: 100%;
+  transition: all 200ms ease-in-out;
 }
 
-.shadow {
-  box-shadow: 0 2px 4px 4px rgba(0, 0, 0, .2);
+.header-menuButton-title {
+  display: flex;
+  transition: all 200ms ease-in-out;
 }
 
 .header-title {
@@ -181,21 +150,10 @@ header {
   font-size: 2rem;
   /* padding-right: 20px; */
   border: none;
+    transition: all 200ms ease-in-out;
 }
 
-/* ########################### Used for JS ################################# */
-.header-background-opacity {
-  background-color: rgba(245, 245, 245, 1);
-  width: 100%;
-}
-
-.menu-icon-white {
-  background-color: transparent;
-  color: #fff;
-}
-
-.menu-icon-blue {
-  background-color: transparent;
+.menu-icon:hover, .menu-icon:focus {
   color: #268bcc;
 }
 
@@ -209,8 +167,8 @@ header {
   left: 0;
   background-color: rgba(38, 139, 204, 1);
   overflow-x: hidden;
-  transition: 0.3s;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9)
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
   font-size: 2rem;
 }
 
@@ -219,12 +177,20 @@ header {
   justify-content: flex-end;
 }
 
+.menu-button {
+  transition: all 200ms ease-in-out;
+}
+
+.menu-button:hover, .menu-button:focus{
+  color: #268bcc;
+}
+
 .nav-close-button {
-color: #f5f5f5;
-background-color: #268bcc;
-transition: 0.3s;
-border: none;
-padding: 0.5rem;
+  color: #f5f5f5;
+  background-color: #268bcc;
+  transition: 0.3s;
+  border: none;
+  padding: 0.5rem;
 }
 
 .close-icon {
@@ -257,13 +223,17 @@ padding: 0.5rem;
   transition: all 300ms ease-in-out;
 }
 
+.menu-link {
+  transition: all 300ms ease-in-out;
+}
+
 .menu-link:hover, .menu-link:focus {
-  width: 100%;
   background-color: rgba(0, 0, 0, 0.3);
 }
 
 .menu-link:hover::before {
-  content: " > ";
+  content: " < ";
+  transform: rotateX(180deg);
 }
 
 .menu-link-item {
@@ -290,15 +260,11 @@ padding: 0.5rem;
   background-color: transparent;
   border: none;
   text-decoration: none;
-  transition: 0.3s;
-  overflow-x: hidden;
-
+  transition: all 0.5s ease-in-out;
 }
 
 #side-nav-menu-attribution-text:hover {
   text-decoration: underline;
-  -webkit-transition: width 300ms;
-  transition: width 300ms;
 }
 
 [aria-current] {
@@ -330,10 +296,6 @@ footer p {
   margin: 0px;
 }
 
-.shadow-footer {
-  box-shadow: 2px 0 4px 4px rgba(0, 0, 0, .3);
-}
-
 /*################################ END #######################################*/
 /* ############################################################################
 
@@ -348,9 +310,11 @@ footer p {
   align-items: center;
   padding: 0px;
 }
+
 .home-content p {
   margin: 0 0;
 }
+
 .hero-button {
   background-color: #339071;
   color: #f5f5f5;
@@ -601,7 +565,6 @@ footer p {
   /* .menu-icon {
     font-size: 3rem;
   } */
-
   /* ##### Home Page ####### */
   .home-content p {
     padding: 0px 30%;
@@ -634,3 +597,77 @@ footer p {
 }
 
 /*################################ END #######################################*/
+/* ############################################################################
+#
+#
+#                                Used for JS
+#
+#
+#############################################################################*/
+.white {
+  color: #f5f5f5;
+}
+
+.blue {
+  color: #268bcc;
+}
+
+.stop-scroll {
+  overflow-y: hidden;
+}
+
+.interaction-disabled {
+  pointer-events: none;
+}
+
+.interaction-enabled {
+  pointer-events: auto;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.shadow {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header-background-opacity {
+  background-color: rgba(245, 245, 245, 1);
+  width: 100%;
+}
+
+.menu-icon-white {
+  background-color: transparent;
+  color: #fff;
+}
+
+.menu-icon-blue {
+  background-color: transparent;
+  color: #268bcc;
+}
+
+.transformSmall {
+  transform: translateY(-100%);
+}
+
+.transformLarge {
+  transform: translateY(0%);
+}
+
+.shadow-footer {
+  box-shadow: 2px 0 4px 4px rgba(0, 0, 0, .3);
+}
+
+/*will no work for animation*/
+.display-none {
+  display: none;
+}
+
+.display {
+  display: block;
+}
