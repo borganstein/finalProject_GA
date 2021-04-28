@@ -35,7 +35,7 @@ function closeNav() {
 //################## Click Listeners ###################
 
 menuButton.addEventListener('click', openNav);
-closeButton.addEventListener("click", closeNav);
+// closeButton.addEventListener("click", closeNav);
 sideMenu.addEventListener('click', closeNav);
 
 //#####################################################
