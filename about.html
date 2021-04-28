@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Learn German</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
   <link rel="icon" type="image/png" href="images/favicon.png">
   <!-- Stylesheets -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" crossorigin="anonymous" />
@@ -12,7 +14,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
   <!-- Scripts-->
   <script src="https://kit.fontawesome.com/f2c6109eb3.js" crossorigin="anonymous"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="scripts/header.js"></script>
 
 </head>
@@ -22,8 +23,10 @@
     <h1 class="hero-h1">About</h1>
   </div>
   <header id="header">
-  <button class="menu-icon menu-icon-white"><i class="menu-icon menu-icon-white fad fa-bars" id="menuButton"></i></button>
-    <h1 class="header-title blue display-none" id="headerTitle">About</h1>
+    <div class="header-menuButton-title">
+    <button class="menu-icon menu-icon-white visible" title="menu button"><i class="menu-icon menu-icon-white fad fa-bars" id="menuButton"></i></button>
+    <h1 class="header-title blue hidden" id="headerTitle">About</h1>
+  </div>
     <div id="mySidenav" class="side-nav hidden">
       <div class="menu-button-area"><button href="javascript:void(0)" class="nav-close-button" id="closeButton"><i class="fal fa-times close-icon"></i></button></div>
       <div class="side-nav-menu">
