@@ -324,9 +324,9 @@ footer p {
   margin-top: 3rem;
   margin-bottom: 3rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
-  border: 1px solid #339071;
+  border: 1px solid #339071;   /* to stop reflow when adding border pixel */
   text-decoration: none;
-  /* to stop reflow when adding border pixel */
+  transition: all 300ms ease-in;
 }
 
 .hero-button:hover {
