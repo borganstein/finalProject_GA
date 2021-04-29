@@ -1,22 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Learn German</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
-
-  <!-- Stylesheets -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" crossorigin="anonymous" />
   <link rel="stylesheet" href="css/global.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-  <!-- Scripts-->
   <script src="https://kit.fontawesome.com/f2c6109eb3.js" crossorigin="anonymous"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-  <script src="scripts/navigation_menu.js"></script>
   <script src="scripts/header.js"></script>
-
 </head>
 
 <body>
@@ -24,17 +19,20 @@
     <h1 class="hero-h1">About</h1>
   </div>
   <header id="header">
-    <button class="menu-icon menu-icon-white" id="menu-button" onclick="openNav()">&#9776;</button>
-    <h1 class="header-title blue display-none" id="header-title">Socials</h1>
-    <div id="mySidenav" class="side-nav hidden" onclick="closeNav()">
-      <button href="javascript:void(0)" class="close-button menu-link" onclick="closeNav()">&times;</button>
-      <ul class="side-nav-menu" onclick="closeNav()">
-        <li><a class="menu-link menu-link-item" href="index.html">Home</a></li>
-        <li aria-current="page"><a class="menu-link menu-link-item" href="about.html">About</a></li>
-        <li><a class="menu-link menu-link-item" href="socials.html">Socials</a></li>
-      </ul>
-      <div class="side-nav-menu-attribution">
-        <a class="side-nav-menu-attribution-text" href="https://bjorn.rostron.co">Made by Borganstein</a>
+    <div class="header-menuButton-title">
+      <button class="menu-icon menu-icon-white visible" id="menuButton" title="menu button"><i class="menu-icon menu-icon-white fad fa-bars" id="menuIcon"></i></button>
+      <h1 class="header-title blue hidden" id="headerTitle">About</h1>
+    </div>
+    <div id="mySidenav" class="side-nav hidden">
+      <div class="menu-button-area"><button href="javascript:void(0)" class="nav-close-button" id="closeButton"><i class="fal fa-times close-icon"></i></button></div>
+      <div class="side-nav-menu">
+        <a class="menu-link menu-link-item" href="index.html">Home</a>
+        <a class="menu-link menu-link-item" href="flashcard.html">Flashcard</a>
+        <a aria-current="page" class="menu-link menu-link-item" href="about.html">About</a>
+        <a class="menu-link menu-link-item" href="socials.html">Socials</a>
+        <div class="side-nav-menu-attribution">
+          <a id="side-nav-menu-attribution-text" href="https://bjorn.rostron.co">Made by Borganstein</a>
+        </div>
       </div>
     </div>
   </header>
@@ -48,26 +46,30 @@
       <p>I am bilingual in German (and obviously English) but living in Australia for the last 25 years means that I struggle with my German. This site, I hope will help me (and possible others) to learn some German. Also, just a fun way to play
         around with some basic HTML, CSS and JS.</p>
       <p>The colour scheme for this website is influenced by the Canton of Zurich, Switzerland whose primary colours are white and blue.
-      I grew up in Zurich and so it has a special place in my heart</p>
-      <span class="photo-container">
-      <img class="photo-embed" src="images/rhiannon-elliott-unsplash.jpg" alt="landscape photo looking at the city from the river">
-    </span>
+        I grew up in Zurich and so it has a special place in my heart</p>
+      <div class="photo-container">
+        <img class="photo-embed" src="images/rhiannon-elliott-unsplash.jpg" alt="landscape photo looking at the city from the river">
+      </div>
       <p>Hope you enjoy and please hit me up if you have any questions or helpful tips.</p>
     </div>
     <div class="social-link-grid">
       <div class="social-link-item">
-        <a title="twitter" class="social-link link-style" href="https://twitter.com/borganstein"><i class="fab fa-twitter link-style-icon"></i></a>
+        <a title="twitter" class="social-link link-style" id="twitterAboutButton" href="https://twitter.com/borganstein"><i class="fab fa-twitter link-style-icon"></i></a>
       </div>
       <div class="social-link-item">
         <a title="email" class="social-link link-style" href="mailto:german@transcendingdigital.space" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope link-style-icon"></i></a>
       </div>
       <div class="social-link-item">
+        <a title="session-messenger" class="social-link link-style" href="https://bjorn.rostron.co"><i class="fas fa-user-circle link-style-icon"></i></a>
+      </div>
+      <div class="social-link-item">
         <a title="session-messenger" class="social-link link-style" href="sessionmessenger.html"><i class="fas fa-comment-alt link-style-icon"></i></a>
       </div>
   </main>
-  <footer class="shadow-footer">
+  <footer>
     <p>Made with Caffeine in Sydney</p>
   </footer>
 </body>
+<script src="scripts/navigation_menu.js"></script>
 
 </html>

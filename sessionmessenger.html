@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <title>Learn German</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Learn German</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
   <!-- Stylesheets -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" crossorigin="anonymous" />
   <link rel="stylesheet" href="css/global.css">
@@ -13,61 +15,71 @@
 
   <!-- Scripts-->
   <script src="https://kit.fontawesome.com/f2c6109eb3.js" crossorigin="anonymous"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="scripts/navigation_menu.js"></script>
-  <script src="scripts/header.js"></script>
+  <script src="scripts/header.js" Cache-Control: max-age=31536000, immutable></script>
 </head>
 
 <body>
   <div class="hero-cover" id="hero-cover">
-    <h1 class="hero-h1">Session</h1>
-    <h3 class="hero-h3">Messenger</h3>
+    <h1 class="hero-h1">Session <span class="hero-h3">Messenger</span></h1>
   </div>
   <header id="header">
-    <button class="menu-icon menu-icon-white" id="menu-button" onclick="openNav()">&#9776;</button>
-    <h1 class="header-title blue display-none" id="header-title">Socials</h1>
-    <div id="mySidenav" class="side-nav hidden" onclick="closeNav()">
-      <button href="javascript:void(0)" class="close-button menu-link" onclick="closeNav()">&times;</button>
-      <ul class="side-nav-menu" onclick="closeNav()">
-        <li><a class="menu-link menu-link-item" href="index.html">Home</a></li>
-        <li><a class="menu-link menu-link-item" href="about.html">About</a></li>
-        <li><a class="menu-link menu-link-item" href="socials.html">Socials</a></li>
-        <li aria-current="page"><a class="menu-link menu-link-item" href="sessionmessenger.html">Session</a></li>
-      </ul>
-      <div class="side-nav-menu-attribution">
-        <a class="menu-link menu-link-item side-nav-menu-attribution-text" href="https://bjorn.rostron.co">Made by Borganstein</a>
+    <div class="header-menuButton-title">
+    <button class="menu-icon menu-icon-white visible" id="menuButton" title="menu button"><i class="menu-icon menu-icon-white fad fa-bars" id="menuIcon"></i></button>
+    <h1 class="header-title blue hidden" id="headerTitle">Session</h1>
+  </div>
+    <div id="mySidenav" class="side-nav hidden">
+      <div class="menu-button-area"><button href="javascript:void(0)" class="nav-close-button" id="closeButton"><i class="fal fa-times close-icon"></i></button></div>
+      <div class="side-nav-menu">
+        <a class="menu-link menu-link-item" href="index.html">Home</a>
+        <a class="menu-link menu-link-item" href="flashcard.html">Flashcard</a>
+        <a class="menu-link menu-link-item" href="about.html">About</a>
+        <a class="menu-link menu-link-item" href="socials.html">Socials</a>
+        <a aria-current="page" class="menu-link menu-link-item" href="sessionmessenger.html">Session</a>
+        <div class="side-nav-menu-attribution">
+          <a id="side-nav-menu-attribution-text" href="https://bjorn.rostron.co">Made by Borganstein</a>
+        </div>
       </div>
     </div>
   </header>
   <main class="session main-positioning">
     <div class="session-intro">
-<!--     <a class="session-logo" href="https://getsession.org/"><img src="./images/session-sitelogo.png" alt="Session Logo"></a> -->
+      <!--     <a class="session-logo" href="https://getsession.org/"><img src="./images/session-sitelogo.png" alt="Session Logo"></a> -->
       <h1 class="session-title">Session Messenger</h1>
-    <ul class="session-list">
-      <li><a tabindex="0" class="" href="https://getsession.org.">Get Session</a>
-      <li>Fork of <a tabindex="0" class="link-animation" href="https://www.signal.org/">Signal</a></li>
-      <li>Anonymous: No phone number required </li>
-      <li>Decentralised service</li>
-      <li>Download Session on Android, iOS or desktop and use my session ID to connect!</li>
-    </ul>
+      <ul class="session-list">
+        <li><a tabindex="0" class="" href="https://getsession.org.">Get Session</a>
+        <li>Fork of <a tabindex="0" class="link-animation" href="https://www.signal.org/">Signal</a></li>
+        <li>Anonymous: No phone number required </li>
+        <li>Decentralised service</li>
+        <li>Download Session on Android, iOS or desktop and use my session ID to connect!</li>
+      </ul>
     </div>
     <div class="session-QRcode">
       <h4 class="session-QRcode-title">Session QR Code</h4>
       <div class="session-QRcode-text">
-      <p> Use your iOS or Android Session app to scan the qr code for a quick connection</p>
-      <img src="images/session_QRcode.png" alt="Session QR Code">
-        </div>
-        </div>
-        <div class="session-copy tooltip">
-      <button class="session-button link-style link-style-animation" id="session-button" onclick="copysessionIDfunction()" onmouseout="outFunc()">
-        <span class="tooltiptext" id="session-id">Copy to clipboard</span>
-        My Session ID
+        <p> Use your iOS or Android Session app to scan the qr code for a quick connection</p>
+        <img src="images/session_QRcode.png" alt="Session QR Code">
+      </div>
+    </div>
+    <span id="session-button-modal-text" class="display-none">Copied!</span>
+    <div class="session-copy tooltip">
+      <button class="session-button link-style link-style-animation" id="sessionButton">
+        <span id="session-button-hover-text" class="display-none">Copy</span>
+        <span id="session-button-text">My Session ID</span>
       </button>
+    </div>
+    </div>
+    <div class="modal-background close-modal" id="modalBackground">
+      <button href="javascript:void(0)" class="modal-close-button close-modal" id='closeModalButton'><i class="fas fa-times modal-close-icon"></i></button>
+      <div id="sessionModalcontent">
+        <h1 class="session-button-modal-h1 session-button-modal-text close-modal">Copied!</h1>
+      </div>
     </div>
   </main>
   <footer>
     <p>Made with Caffeine in Sydney</p>
   </footer>
 </body>
+<script src="scripts/navigation_menu.js"></script>
+<script src="scripts/sessionCopy.js"></script>
 
 </html>
