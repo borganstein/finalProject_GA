@@ -21,9 +21,8 @@ https://www.w3schools.com/howto/howto_css_animate_buttons.asp
   padding: 1rem;
   width: 50%;
   text-align: center;
-  -webkit-transition-duration: 0.4s;
-  /* Safari */
-  transition-duration: 0.4s;
+  -webkit-transition-duration: all 300ms ease-in;   /* Safari */
+  transition-duration: all 300ms ease-in;
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;
