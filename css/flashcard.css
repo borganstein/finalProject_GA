@@ -5,9 +5,10 @@ https://davidwalsh.name/css-flip
 https://www.w3schools.com/howto/howto_css_animate_buttons.asp
 
 ############################################################################*/
-.mainFlashcardContainer {
+#mainFlashcardContainer {
   display: flex;
   justify-content: space-between;
+  padding: 5rem;
 }
 
 #flipButton {
@@ -19,11 +20,10 @@ https://www.w3schools.com/howto/howto_css_animate_buttons.asp
   font-size: 2rem;
   color: #F5F5F5;
   padding: 1rem;
-  width: 50%;
+  width: 80%;
   text-align: center;
-  -webkit-transition-duration: 0.4s;
-  /* Safari */
-  transition-duration: 0.4s;
+  -webkit-transition-duration: all 300ms ease-in;   /* Safari */
+  transition-duration: all 300ms ease-in;
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;
@@ -46,7 +46,7 @@ https://www.w3schools.com/howto/howto_css_animate_buttons.asp
   margin-left: -20px !important;
   margin-top: -120%;
   opacity: 0;
-  transition: all 0.8s
+  transition: all 0.8s ease-in;
 }
 
 #flipButton:active:after {

@@ -9,9 +9,8 @@ const closeButton = document.querySelector('#closeButton');
 // ####################### Navigation Menu JS #####################
 
 function openNav() {
-  // setting variables for use within function
   sideMenu.classList.remove('hidden'); // removes .hidden class from sidemenu
-  sideMenu.style.width = "300px"; // changes width to 60%; can be done without but this aids in having nice animation
+  sideMenu.style.width = "200px"; // changes width to 60%; can be done without but this aids in having nice animation
   mainContainer.classList.add('interaction-disabled'); //disables pointer-events
   bodyContainer.classList.add('stop-scroll'); // stops the ability to scroll while the menu is open
 
@@ -21,7 +20,6 @@ function openNav() {
 };
 
 function closeNav() {
-
   sideMenu.classList.add('hidden') // hides the menu
   sideMenu.style.width = "0"; // makes the width 0; can be done without but this makes for a nice animation
   mainContainer.classList.remove('interaction-disabled'); // enables pointer-events
