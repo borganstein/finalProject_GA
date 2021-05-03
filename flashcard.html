@@ -38,9 +38,11 @@
   </header>
   <main class="main-positioning" id="mainFlashcardContainer">
         <button id="flipButton">Random German Word</button>
+               <button id="overlay-open-button">Open Hint</button>
     <div class="flashcard-container">
       <!-- <div class="flashcard"> -->
         <div class="flashcardFront" id="flashcardGerman">
+            <p>Flashcard</p>
             <h3>German</h3>
             <p class="flashcard-text" id="flashcardGermanText"></p>
           </div>
@@ -50,7 +52,17 @@
           </div>
 
        </div>
-
+       <div id="overlay">
+         <div class="overlay-text-for-button-area">
+           <i class="fad fa-arrow-left left-arrow"></i>
+         <p id="overlay-text">Click on this button to generate a random german word</p>
+         </div>
+         <div class="overlay-text-for-flashcard-area">
+           <i class="fad fa-arrow-left left-arrow"></i>
+         <p id="overlay-text">Hover over Flashcard on Desktop and click on Mobile for English word</p>
+         </div>
+<button id="close-overlay-button">Close Hint</button>
+       </div>
   </main>
   <footer>
     <p>Made with Caffeine in Sydney</p>
