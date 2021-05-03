@@ -13,6 +13,9 @@ const flashcardFront = document.querySelector("#flashcardGerman");
 const flashcardGermanText = document.querySelector("#flashcardGermanText")
 const flashcardEnglishText = document.querySelector("#flashcardEnglishText")
 const flipButton = document.querySelector("#flipButton");
+const overlay = document.querySelector("#overlay")
+const overlayCloseButton = document.querySelector("#close-overlay-button")
+const overlayOpenButton = document.querySelector("#overlay-open-button")
 
 function flipcardButton() {
   //
@@ -35,10 +38,18 @@ function flipCardBack() {
   flashcardBack.classList.add('hidden');
   flashcardFront.classList.add('transform-rotate')
 };
+
+function hideOverlay() {
+  overlay.classList.add('hidden');
+}
+
+function openOverlay() {
+  overlay.classList.remove('hidden');
+}
 // ########## Events ###########
 //
 flipButton.addEventListener('click', flipcardButton);
-// flashcardFront.addEventListener('click', flipCard);
-// flashcardBack.addEventListener('click', flipCardBack);
+overlayCloseButton.addEventListener('click', hideOverlay);
+overlayOpenButton.addEventListener('click', openOverlay);
 //
 // ############################################################################
