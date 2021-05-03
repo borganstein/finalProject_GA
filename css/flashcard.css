@@ -8,22 +8,21 @@ https://www.w3schools.com/howto/howto_css_animate_buttons.asp
 #mainFlashcardContainer {
   display: flex;
   justify-content: space-between;
-  padding: 5rem;
+  align-items: center;
+
 }
 
 #flipButton {
-  position: relative;
+
   background-color: #268bcc;
   border: 1px solid #268bcc;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
-  margin: 2rem;
   font-size: 2rem;
   color: #F5F5F5;
   padding: 1rem;
-  width: 80%;
+  width: 267px;
   text-align: center;
-  -webkit-transition-duration: all 300ms ease-in;   /* Safari */
-  transition-duration: all 300ms ease-in;
+  transition: all 200ms ease-in-out;
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;
@@ -36,93 +35,96 @@ https://www.w3schools.com/howto/howto_css_animate_buttons.asp
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
 }
 
-#flipButton:after {
-  content: "";
-  background: #268bcc;
-  display: block;
-  position: absolute;
-  padding-top: 300%;
-  padding-left: 350%;
-  margin-left: -20px !important;
-  margin-top: -120%;
-  opacity: 0;
-  transition: all 0.8s ease-in;
-}
+ .flashcard-container {
+   position: relative;
+   overflow: hidden;
+   width: 267px;
+   height: 267px;
+   margin: 20px auto;
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
 
-#flipButton:active:after {
-  flashcardFront.style.background() padding: 0;
-  margin: 0;
-  opacity: 1;
-  transition: 0s
-}
-
-/* entire container, keeps perspective */
-.flashcard-container {
-  perspective: 1000px;
 }
 
 .flashcard-container H3 {
   font-size: 2.5rem;
 }
 
-/* flip the pane when hovered */
-.flashcard-container:hover .flashcard, .flashcard-container.hover .flashcard {
-  transform: rotateY(180deg);
-}
-
-.flashcard-container, .flashcardFront, .flashcardBack {
-  width: 320px;
-  height: 480px;
-}
-
-/* flip speed goes here */
-.flashcard {
-  transition: 0.6s;
-  transform-style: preserve-3d;
-  position: relative;
-  cursor: pointer;
-}
-
-/* hide back of pane during swap */
-.flashcardFront, .flashcardBack {
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-/* front pane, placed above back */
+/* front pane, placed above back, German */
 .flashcardFront {
+  width: 267px;
+  height: 267px;
+
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  z-index: 2;
+
   background-color: #268bcc;
-  border: 2px solid #268bcc;
+  /* border: 2px solid #268bcc; */
   color: #f5f5f5;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
-  /* for firefox 31 */
-  transform: rotateY(0deg);
+  transition: all 500ms ease-in-out;
 }
 
-/* back, initially hidden pane */
+/* back, initially hidden pane, English */
 .flashcardBack {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  transform: translateY(-100%);
+  width: 267px;
+	height: 267px;
+
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   background-color: #f5f5f5;
-  border: 2px solid #268bcc;
+  /* border: 2px solid #268bcc; */
   color: #268bcc;
-  transform: rotateY(180deg);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
+  transition: all 500ms ease-in-out;
 }
 
 .flashcard-text {
   font-size: 1.7rem;
   text-align: center;
-  overflow-wrap: break-word;
-  /*trying to wrap the words onto 2 lines
 }
+
+.flashcard-container:hover .flashcardBack {
+  transform: translateY(0%);
+}
+
+/* ############################################################################
+
+                                    CSS
+                            Responsive Page Points
+
+############################################################################# */
+@media screen and (min-width: 750px) {
+
+
+  /*Add new content before this comment*/
+}
+
+@media screen and (min-width: 970px) {
+
+  .flashcard-container {
+    width: 400px;
+    height: 400px;
+ }
+
+ .flashcardFront {
+   width: 400px;
+   height: 400px;
+ }
+
+ .flashcardBack {
+   width: 400px;
+ 	height: 400px;
+
+ }
+  /*Add new content before this comment*/
+}
+
+/*################################ END #######################################*/

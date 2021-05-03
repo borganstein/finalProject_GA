@@ -12,10 +12,6 @@
   <link rel="stylesheet" href="css/flashcard.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-  <!-- Scripts-->
-  <script src="https://kit.fontawesome.com/f2c6109eb3.js" crossorigin="anonymous"></script>
-
-  <script src="scripts/header.js"></script>
 </head>
 
 <body>
@@ -42,8 +38,8 @@
   </header>
   <main class="main-positioning" id="mainFlashcardContainer">
         <button id="flipButton">Random German Word</button>
-    <div class="flashcard-container" ontouchstart="this.classList.toggle('hover');">
-      <div class="flashcard">
+    <div class="flashcard-container">
+      <!-- <div class="flashcard"> -->
         <div class="flashcardFront" id="flashcardGerman">
             <h3>German</h3>
             <p class="flashcard-text" id="flashcardGermanText"></p>
@@ -52,27 +48,17 @@
             <h3>English</h3>
             <p class="flashcard-text" id="flashcardEnglishText"></p>
           </div>
-        </div>
-      </div>
-    <!--  <div class="flashcard" id="flashcard">
 
-          <div id="flashcardGerman" class="front flashcard-text">
-            <h3>German</h3>
-             german word goes here
-          </div>
-
-          <div id="flashcardEnglish" class="back flashcard-text">
-            <h3>English</h3>
-             english word goes here
-          </div>
-      </div> -->
+       </div>
 
   </main>
   <footer>
     <p>Made with Caffeine in Sydney</p>
   </footer>
+  <script src="https://kit.fontawesome.com/f2c6109eb3.js" crossorigin="anonymous"></script>
+  <script src="scripts/header.js"></script>
+  <script src="scripts/navigation_menu.js"></script>
+  <script src="scripts/flashcard.js"></script>
 </body>
-<script src="scripts/navigation_menu.js"></script>
-<script src="scripts/flashcard.js"></script>
 
 </html>
