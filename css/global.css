@@ -3,9 +3,6 @@
                                 Global CSS
                      Common CSS for all .html pages
 
-
-                       box-shadow: 0px 2px 4px rgba(38, 139, 204, 0.9);
-
 ##############################################################################*/
 * {
   font-family: "Roboto Mono", monospace;
@@ -38,14 +35,6 @@ p {
   padding: 10px;
 }
 
-/* colors */
-/* .white {
-  color: #f5f5f5;
-}
-
-.blue {
-  color: #268bcc;
-} */
 /* link & button styling with hover animation */
 .social-link-grid {
   display: grid;
@@ -89,22 +78,7 @@ p {
   display: none;
 }
 
-/* ############################# Hero Image #################################*/
-.hero-cover {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(../images/holgersson-unsplash-mobile.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
-  padding: 15px;
-  z-index: 1;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9)
-}
-
+/* ############################# Hero cover #################################*/
 .hero-h1 {
   display: flex;
   flex-direction: column;
@@ -153,7 +127,7 @@ header {
   font-size: 2rem;
   /* padding-right: 20px; */
   border: none;
-    transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
 .menu-icon:hover, .menu-icon:focus {
@@ -184,7 +158,7 @@ header {
   transition: all 200ms ease-in-out;
 }
 
-.menu-button:hover, .menu-button:focus{
+.menu-button:hover, .menu-button:focus {
   color: #268bcc;
 }
 
@@ -297,13 +271,26 @@ footer p {
   margin: 0px;
 }
 
-/*################################ END #######################################*/
 /* ############################################################################
 
                                 Home Page CSS
-                             CSS for the Home Page
 
 ############################################################################# */
+.hero-cover-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../images/holgersson-unsplash-mobile.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding: 15px;
+  z-index: 1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9)
+}
+
 /* ##### Main ###### */
 .home-content {
   display: flex;
@@ -325,7 +312,8 @@ footer p {
   margin-top: 3rem;
   margin-bottom: 3rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
-  border: 1px solid #339071;   /* to stop reflow when adding border pixel */
+  border: 1px solid #339071;
+  /* to stop reflow when adding border pixel */
   text-decoration: none;
   transition: all 300ms ease-in;
 }
@@ -335,20 +323,52 @@ footer p {
   color: #339071;
   border: 1px solid #339071;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 1);
-
 }
 
 .creditQuote {
   font-size: 0.5rem;
 }
 
-/*################################ END #######################################*/
+/* ############################################################################
+
+                            Flashcard CSS
+
+############################################################################# */
+.hero-cover-flashcard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../images/lin-mei-unsplash-mobile.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding: 15px;
+  z-index: 1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9)
+}
+
 /* ############################################################################
 
                             About Page CSS
-                         CSS for the About Page
 
 ############################################################################# */
+.hero-cover-about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../images/eberhard-grossgasteiger-unsplash-mobile.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding: 15px;
+  z-index: 1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9)
+}
+
 .about-intro-text {
   margin: 0px;
   text-align: center;
@@ -392,27 +412,52 @@ footer p {
   transform: scale(1.05) rotate(1deg);
 }
 
-/*################################ END #######################################*/
 /* ############################################################################
 
                             Social Page CSS
-                            CSS for the socials Page
 
 ############################################################################# */
+.hero-cover-social {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../images/b-nw-unsplash-mobile.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding: 15px;
+  z-index: 1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9)
+}
+
 .social-h3 {
   text-align: center;
   font-size: 3rem;
   margin-top: 5rem;
 }
 
-/*################################ END #######################################*/
 /* ############################################################################
 
                             Session Page CSS
-                            CSS for the Sesssion Page
-
 
 ############################################################################# */
+.hero-cover-session {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../images/michal-matlon-unsplash-mobile.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding: 15px;
+  z-index: 1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9)
+}
+
 .session-title {
   text-align: center;
   font-size: 3rem;
@@ -514,11 +559,9 @@ footer p {
   border: 1px solid #268bcc;
 }
 
-/*################################ END #######################################*/
 /* ############################################################################
 
-                                    CSS
-                            Responsive Page Points
+                        CSS Responsive Page Points
 
 ############################################################################# */
 @media screen and (min-width: 750px) {
@@ -557,9 +600,29 @@ footer p {
 
   /* Desktops */
   /* ##### Global CSS */
-  .hero-cover {
+  .hero-cover-home {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
       url(../images/holgersson-unsplash.jpg);
+  }
+
+  .hero-cover-flashcard {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url(../images/lin-mei-unsplash.jpg);
+  }
+
+  .hero-cover-about {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url(../images/eberhard-grossgasteiger-unsplash.jpg);
+  }
+
+  .hero-cover-social {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url(../images/b-nw-unsplash.jpg);
+  }
+
+  .hero-cover-session {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url(../images/michal-matlon-unsplash.jpg);
   }
 
   .hero-h1 {
@@ -602,12 +665,9 @@ footer p {
   /*Add new content before this comment*/
 }
 
-/*################################ END #######################################*/
 /* ############################################################################
 #
-#
 #                                Used for JS
-#
 #
 #############################################################################*/
 .white {
@@ -669,7 +729,7 @@ footer p {
   box-shadow: 2px 0 4px 4px rgba(0, 0, 0, .3);
 }
 
-/*will no work for animation*/
+/*will not work for animation*/
 .display-none {
   display: none;
 }
