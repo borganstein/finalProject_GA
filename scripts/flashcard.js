@@ -51,5 +51,6 @@ function openOverlay() {
 flipButton.addEventListener('click', flipcardButton);
 overlayCloseButton.addEventListener('click', hideOverlay);
 overlayOpenButton.addEventListener('click', openOverlay);
+overlay.addEventListener('click', hideOverlay);
 //
 // ############################################################################

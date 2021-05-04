@@ -20,9 +20,9 @@
   </div>
   <header id="header">
     <div class="header-menuButton-title">
-    <button class="menu-icon menu-icon-white visible" id="menuButton" title="menu button"><i class="menu-icon menu-icon-white fad fa-bars" id="menuIcon"></i></button>
-    <h1 class="header-title blue hidden" id="headerTitle">Flashcard</h1>
-  </div>
+      <button class="menu-icon menu-icon-white visible" id="menuButton" title="menu button"><i class="menu-icon menu-icon-white fad fa-bars" id="menuIcon"></i></button>
+      <h1 class="header-title blue hidden" id="headerTitle">Flashcard</h1>
+    </div>
     <div id="mySidenav" class="side-nav hidden">
       <div class="menu-button-area"><button href="javascript:void(0)" class="nav-close-button" id="closeButton"><i class="fal fa-times close-icon"></i></button></div>
       <div class="side-nav-menu">
@@ -37,32 +37,33 @@
     </div>
   </header>
   <main class="main-positioning" id="mainFlashcardContainer">
-        <button id="flipButton">Random German Word</button>
-               <button id="overlay-open-button">Open Hint</button>
+    <button id="flipButton">Random German Word</button>
+    <button id="overlay-open-button">Open Guide</button>
     <div class="flashcard-container">
       <!-- <div class="flashcard"> -->
-        <div class="flashcardFront" id="flashcardGerman">
-            <p>Flashcard</p>
-            <h3>German</h3>
-            <p class="flashcard-text" id="flashcardGermanText"></p>
-          </div>
-        <div class="flashcardBack" id="flashcardEnglish">
-            <h3>English</h3>
-            <p class="flashcard-text" id="flashcardEnglishText"></p>
-          </div>
+      <div class="flashcardFront" id="flashcardGerman">
+        <p>Flashcard</p>
+        <h3>German</h3>
+        <p class="flashcard-text" id="flashcardGermanText"></p>
+      </div>
+      <div class="flashcardBack" id="flashcardEnglish">
+        <p>Flashcard</p>
+        <h3>English</h3>
+        <p class="flashcard-text" id="flashcardEnglishText"></p>
+      </div>
 
-       </div>
-       <div id="overlay">
-         <div class="overlay-text-for-button-area">
-           <i class="fad fa-arrow-left left-arrow"></i>
-         <p id="overlay-text">Click on this button to generate a random german word</p>
-         </div>
-         <div class="overlay-text-for-flashcard-area">
-           <i class="fad fa-arrow-left left-arrow"></i>
-         <p id="overlay-text">Hover over Flashcard on Desktop and click on Mobile for English word</p>
-         </div>
-<button id="close-overlay-button">Close Hint</button>
-       </div>
+    </div>
+    <div class="hidden" id="overlay">
+      <div class="overlay-text-for-button-area">
+        <i class="fad fa-arrow-left left-arrow"></i>
+        <p id="overlay-text">Click on this button to generate a random german word</p>
+      </div>
+      <div class="overlay-text-for-flashcard-area">
+        <i class="fad fa-arrow-left left-arrow"></i>
+        <p id="overlay-text">Hover over Flashcard on Desktop and click on Mobile for English word</p>
+      </div>
+      <button id="close-overlay-button">Close Guide</button>
+    </div>
   </main>
   <footer>
     <p>Made with Caffeine in Sydney</p>

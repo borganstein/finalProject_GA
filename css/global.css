@@ -3,6 +3,9 @@
                                 Global CSS
                      Common CSS for all .html pages
 
+
+                       box-shadow: 0px 2px 4px rgba(38, 139, 204, 0.9);
+
 ##############################################################################*/
 * {
   font-family: "Roboto Mono", monospace;
