@@ -15,13 +15,13 @@ https://www.w3schools.com/howto/howto_css_animate_buttons.asp
 #flipButton {
   background-color: #268bcc;
   border: 1px solid #268bcc;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
   font-size: 2rem;
   color: #F5F5F5;
   padding: 1rem;
   width: 267px;
   text-align: center;
-  transition: all 200ms ease-in-out;
+  transition: all 300ms ease-in;
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;
@@ -31,7 +31,7 @@ https://www.w3schools.com/howto/howto_css_animate_buttons.asp
   background-color: #f5f5f5;
   color: #268bcc;
   border: 1px solid #268bcc;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.9);
 }
 
 .flashcard-container {
@@ -41,7 +41,7 @@ https://www.w3schools.com/howto/howto_css_animate_buttons.asp
   height: 267px;
   margin: 20px auto;
   border: 2px solid #268bcc;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
 }
 
 .flashcard-container H3 {
@@ -84,7 +84,6 @@ https://www.w3schools.com/howto/howto_css_animate_buttons.asp
   justify-content: flex-start;
   align-items: center;
   background-color: #f5f5f5;
-  /* border: 2px solid #268bcc; */
   color: #268bcc;
   transition: all 500ms ease-in-out;
 }
@@ -120,16 +119,15 @@ https://www.w3schools.com/howto/howto_css_animate_buttons.asp
   justify-content: center;
   align-items: center;
   background-color: #F5F5F5;
-  border: 1px solid  #268bcc;
+  border: 1px solid #268bcc;
   border-radius: 5px;
   margin: 0.5rem;
 }
 
 .left-arrow {
-  font-size:2rem;
+  font-size: 2rem;
   padding-left: 1rem;
 }
-
 
 .overlay-text-for-flashcard-area {
   position: absolute;
@@ -140,7 +138,7 @@ https://www.w3schools.com/howto/howto_css_animate_buttons.asp
   justify-content: center;
   align-items: center;
   background-color: #F5F5F5;
-  border: 1px solid  #268bcc;
+  border: 1px solid #268bcc;
   border-radius: 5px;
   margin: 1rem;
 }
@@ -157,13 +155,15 @@ https://www.w3schools.com/howto/howto_css_animate_buttons.asp
   margin: 1rem;
   text-decoration: none;
   border: none;
-  background-color: #f5f5f5;
+  background-color: #268bcc;
+  color: #f5f5f5;
+  border-radius: 5px;
   transition: all 300ms ease-in-out;
 }
 
 #close-overlay-button:hover, #close-overlay-button:focus {
-  background-color: #268bcc;
-  color: #f5f5f5;
+  background-color: #f5f5f5;
+  color: #268bcc;
 }
 
 #overlay-open-button {
@@ -172,6 +172,7 @@ https://www.w3schools.com/howto/howto_css_animate_buttons.asp
   border: 1px solid #268bcc;
   background-color: #f5f5f5;
   color: #268bcc;
+  border-radius: 5px;
   transition: all 300ms ease-in-out;
 }
 
