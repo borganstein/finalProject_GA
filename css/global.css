@@ -79,6 +79,19 @@ p {
 }
 
 /* ############################# Hero cover #################################*/
+.hero-cover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding: 15px;
+  z-index: 1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9)
+}
+
 .hero-h1 {
   display: flex;
   flex-direction: column;
@@ -277,18 +290,8 @@ footer p {
 
 ############################################################################# */
 .hero-cover-home {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url(../images/holgersson-unsplash-mobile.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
-  padding: 15px;
-  z-index: 1;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9)
 }
 
 /* ##### Main ###### */
@@ -335,18 +338,8 @@ footer p {
 
 ############################################################################# */
 .hero-cover-flashcard {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url(../images/lin-mei-unsplash-mobile.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
-  padding: 15px;
-  z-index: 1;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9)
 }
 
 /* ############################################################################
@@ -355,18 +348,8 @@ footer p {
 
 ############################################################################# */
 .hero-cover-about {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url(../images/eberhard-grossgasteiger-unsplash-mobile.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
-  padding: 15px;
-  z-index: 1;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9)
 }
 
 .about-intro-text {
@@ -418,18 +401,8 @@ footer p {
 
 ############################################################################# */
 .hero-cover-social {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url(../images/b-nw-unsplash-mobile.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
-  padding: 15px;
-  z-index: 1;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9)
 }
 
 .social-h3 {
@@ -444,18 +417,8 @@ footer p {
 
 ############################################################################# */
 .hero-cover-session {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url(../images/michal-matlon-unsplash-mobile.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
-  padding: 15px;
-  z-index: 1;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9)
 }
 
 .session-title {
@@ -503,8 +466,32 @@ footer p {
   height: auto;
 }
 
+.session-copy {
+  display: flex;
+  flex-direction: column;
+}
+
 .session-button {
-  width: 200px;
+  width: 10rem;
+  padding: 1rem;
+  background-color: #f5f5f5;
+  color: #268bcc;
+  border: 1px solid #268bcc;
+  border-radius: 5px;
+  transition: all 300ms ease-in;
+}
+
+.session-button:hover, .session-button:focus {
+  border: 1px solid #268bcc;
+  background-color: #268bcc;
+  color: #f5f5f5;
+}
+
+#session-button-hover-text {
+  padding: 1rem;
+  border: 1px solid #268bcc;
+  margin: 0.5rem;
+  border-radius: 5px;
 }
 
 .modal-background {
@@ -567,9 +554,29 @@ footer p {
 @media screen and (min-width: 750px) {
 
   /* Tablets */
-  .hero-cover {
+  .hero-cover-home {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
       url(../images/holgersson-unsplash.jpg);
+  }
+
+  .hero-cover-flashcard {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url(../images/lin-mei-unsplash.jpg);
+  }
+
+  .hero-cover-about {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url(../images/eberhard-grossgasteiger-unsplash.jpg);
+  }
+
+  .hero-cover-social {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url(../images/b-nw-unsplash.jpg);
+  }
+
+  .hero-cover-session {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url(../images/michal-matlon-unsplash.jpg);
   }
 
   .social-links {
