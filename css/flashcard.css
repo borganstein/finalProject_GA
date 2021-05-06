@@ -93,8 +93,7 @@ https://www.w3schools.com/howto/howto_css_animate_buttons.asp
   text-align: center;
 }
 
-/* .flashcardBack */
-.flashcard-container:hover  {
+.flashcard-container:hover .flashcardBack {
   transform: translateY(0%);
 }
 
