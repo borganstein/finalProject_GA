@@ -10,12 +10,9 @@ let englishList_randomNumber = []; //an object to store the randomNumber generat
 
 const flashcardBack = document.querySelector("#flashcardEnglish");
 const flashcardFront = document.querySelector("#flashcardGerman");
-const flashcardGermanText = document.querySelector("#flashcardGermanText")
-const flashcardEnglishText = document.querySelector("#flashcardEnglishText")
+const flashcardGermanText = document.querySelector("#flashcardGermanText");
+const flashcardEnglishText = document.querySelector("#flashcardEnglishText");
 const flipButton = document.querySelector("#flipButton");
-const overlay = document.querySelector("#overlay")
-const overlayCloseButton = document.querySelector("#close-overlay-button")
-const overlayOpenButton = document.querySelector("#overlay-open-button")
 
 function flipcardButton() {
   //
@@ -27,30 +24,27 @@ function flipcardButton() {
 };
 
 
-function flipCard() {
-  flashcardFront.classList.add('hidden');
-  flashcardBack.classList.remove('hidden');
-  flashcardBack.classList.add('transform-rotate')
-};
-
-function flipCardBack() {
-  flashcardFront.classList.remove('hidden');
-  flashcardBack.classList.add('hidden');
-  flashcardFront.classList.add('transform-rotate')
-};
-
-function hideOverlay() {
-  overlay.classList.add('hidden');
-}
-
-function openOverlay() {
-  overlay.classList.remove('hidden');
-}
+// function flipCard() {
+//   flashcardFront.classList.add('hidden');
+//   flashcardBack.classList.remove('hidden');
+//   flashcardBack.classList.add('transform-rotate')
+// };
+//
+// function flipCardBack() {
+//   flashcardFront.classList.remove('hidden');
+//   flashcardBack.classList.add('hidden');
+//   flashcardFront.classList.add('transform-rotate')
+// };
+//
+// function hideOverlay() {
+//   overlay.classList.add('hidden');
+// }
+//
+// function openOverlay() {
+//   overlay.classList.remove('hidden');
+// }
 // ########## Events ###########
 //
 flipButton.addEventListener('click', flipcardButton);
-overlayCloseButton.addEventListener('click', hideOverlay);
-overlayOpenButton.addEventListener('click', openOverlay);
-overlay.addEventListener('click', hideOverlay);
 //
 // ############################################################################
