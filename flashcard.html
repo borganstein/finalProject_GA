@@ -10,8 +10,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" crossorigin="anonymous" />
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/flashcard.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/f2c6109eb3.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -39,36 +40,36 @@
   <main class="main-positioning" id="mainFlashcardContainer">
     <button id="flipButton">Random German Word</button>
     <button id="overlay-open-button">Open Guide</button>
+
     <div class="flashcard-container">
-      <!-- <div class="flashcard"> -->
+      <div class="flashcardInner">
       <div class="flashcardFront" id="flashcardGerman">
-        <p>Flashcard</p>
         <h3>German</h3>
         <p class="flashcard-text" id="flashcardGermanText"></p>
       </div>
       <div class="flashcardBack" id="flashcardEnglish">
-        <p>Flashcard</p>
         <h3>English</h3>
         <p class="flashcard-text" id="flashcardEnglishText"></p>
       </div>
+    </div>
 
     </div>
-    <div class="hidden" id="overlay">
+   <div class="hidden" id="overlay">
       <div class="overlay-text-for-button-area">
         <i class="fad fa-arrow-left left-arrow"></i>
         <p id="overlay-text">Click on this button to generate a random german word</p>
       </div>
       <div class="overlay-text-for-flashcard-area">
         <i class="fad fa-arrow-left left-arrow"></i>
-        <p id="overlay-text">Hover over Flashcard on Desktop and click on Mobile for English word</p>
+        <p id="overlay-text">Click and hold Flashcard on Desktop and on Mobile for English word</p>
       </div>
       <button id="close-overlay-button">Close Guide</button>
     </div>
+
   </main>
-  <footer>
+ <footer>
     <p>Made with Caffeine in Sydney</p>
   </footer>
-  <script src="https://kit.fontawesome.com/f2c6109eb3.js" crossorigin="anonymous"></script>
   <script src="scripts/header.js"></script>
   <script src="scripts/navigation_menu.js"></script>
   <script src="scripts/flashcard.js"></script>
