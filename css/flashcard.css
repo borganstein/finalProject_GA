@@ -85,6 +85,10 @@ https://www.w3schools.com/howto/howto_css_animate_buttons.asp
   transform-style: preserve-3d;
 }
 
+.flashcardInner h3 {
+  font-size: 2rem;
+}
+
 .flashcardInner:active, .flashcardInner:focus {
   transform: rotateY(180deg);
 }
