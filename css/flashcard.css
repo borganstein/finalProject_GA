@@ -5,12 +5,44 @@ https://davidwalsh.name/css-flip
 https://www.w3schools.com/howto/howto_css_animate_buttons.asp
 
 ############################################################################*/
+/* ############################################################################
+#
+#
+#                                Global CSS
+#                              Table of Contents
+1. Layouts
+2. Components
+  2.1 flipButton
+  2.2 flashcard
+  2.3 Overlay
+3. Responsive Break points
+#
+#
+#
+#
+##############################################################################*/
+
+/* ############################################################################
+
+                              1. Layouts
+
+##############################################################################*/
+
 #mainFlashcardContainer {
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  place-items: center;
+  padding: 5rem 0;
 }
+
+
+/* ############################################################################
+
+                              2. Components
+
+##############################################################################*/
+
+/* ########## 2.1 Flipbutton ########### */
 
 #flipButton {
   background-color: #268bcc;
@@ -34,58 +66,50 @@ https://www.w3schools.com/howto/howto_css_animate_buttons.asp
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.9);
 }
 
+/* ########## 2.2 Flashcard Container ########## */
+
 .flashcard-container {
-  position: relative;
-  overflow: hidden;
-  width: 267px;
+  display: grid;
+  place-items: center;
+  perspective: 100rem;
+  font-family: sans-serif;
+  background: transparent;
+  width: 320px;
   height: 267px;
-  margin: 20px auto;
-  border: 2px solid #268bcc;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
 }
 
-.flashcard-container H3 {
-  font-size: 2.5rem;
-  padding: 1rem 0;
-  margin: 0;
+.flashcardInner {
+  width: 85%;
+  height: 85%;
+  transition: all 300ms ease;
+  transform-style: preserve-3d;
 }
 
-.flashcard-container p {
-  padding: 1rem 0;
-  margin: 0;
+.flashcardInner:active, .flashcardInner:focus {
+  transform: rotateY(180deg);
 }
 
-/* front pane, placed above back, German */
-.flashcardFront {
-  width: 267px;
-  height: 267px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  background-color: #268bcc;
-  /* border: 2px solid #268bcc; */
-  color: #f5f5f5;
-  transition: all 500ms ease-in-out;
-}
 
-/* back, initially hidden pane, English */
-.flashcardBack {
+.flashcardFront, .flashcardBack {
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
   position: absolute;
-  top: 0px;
-  right: 0px;
-  left: 0px;
-  bottom: 0px;
-  width: 267px;
-  height: 267px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flashcardFront {
+  background-color: #268bcc;
+  color: #f5f5f5;
+  border: 2px solid #268bcc;
+}
+
+.flashcardBack {
   background-color: #f5f5f5;
-  color: #268bcc;
-  transform: translateY(-100%);
-  transition: all 500ms ease-in-out;
+  border: 2px solid #268bcc;
+  transform: rotateY(180deg);
 }
 
 .flashcard-text {
@@ -93,9 +117,8 @@ https://www.w3schools.com/howto/howto_css_animate_buttons.asp
   text-align: center;
 }
 
-.flashcard-container:hover .flashcardBack {
-  transform: translateY(0%);
-}
+
+/* ########## 2.3 Overlay ########## */
 
 #overlay {
   position: absolute;
@@ -183,8 +206,7 @@ https://www.w3schools.com/howto/howto_css_animate_buttons.asp
 
 /* ############################################################################
 
-                                    CSS
-                            Responsive Page Points
+                            3. Responsive Page Points
 
 ############################################################################# */
 @media screen and (min-width: 750px) {
@@ -197,17 +219,9 @@ https://www.w3schools.com/howto/howto_css_animate_buttons.asp
     height: 400px;
   }
 
-  .flashcardFront {
-    width: 400px;
-    height: 400px;
-  }
-
-  .flashcardBack {
-    width: 400px;
-    height: 400px;
-  }
 
   /*Add new content before this comment*/
 }
+
 
 /*################################ END #######################################*/
