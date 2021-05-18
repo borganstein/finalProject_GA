@@ -6,46 +6,48 @@
 1. Common css
 2. Typography
   2.1 Home Page
-  2.2 Social Page
+  2.2 About Page
+  2.3 Social Page
 3. Layouts
+  3.1 Header
+  3.2 Home Page
+  3.3 Session Page
+  3.4 Footer
 4. Components
   4.1 Side Menu
   4.2 Link Styling
+  4.3 Hero Covers
+  4.4 Buttons
+  4.5 Photo Embeds
 5. Responsive Break points
-6. Javascript Items
+6. Javascript Items/
 #
 #
 #
-#
-##############################################################################*/
-
-
 /* ############################################################################
 
                               1. Common CSS
 
 ##############################################################################*/
-
 * {
   font-family: "Roboto Mono", monospace;
   font-size: 16px;
 }
 
 body {
-  position: relative;
-  margin: 0px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  position: relative;
+  margin: 0px;
+
   color: #268bcc;
   background-color: #f5f5f5;
 }
 
-.main-positioning {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
+main {
+  padding: 1rem;
 }
 
 /* ############################################################################
@@ -53,14 +55,13 @@ body {
                               2. Typography
 
 ##############################################################################*/
-
-
 a {
   color: #a54a4a;
   font-weight: 800;
 }
 
 p {
+  width: 35ch;
   padding: 10px;
 }
 
@@ -84,22 +85,73 @@ p {
 }
 
 footer p {
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
 }
 
 /* ########## 2.1 Home Page ########## */
-
 .creditQuote {
-  font-size: 0.5rem;
+  font-size: 0.75rem;
+  padding: 1rem 0;
 }
 
 /* ########## 2.2 Social Page ########## */
+.about-intro-text {
+  margin: 0px;
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 5rem;
+}
 
+.about-intro-hero-name {
+  margin: 0px;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.about-text p {
+  margin: 1rem 1rem;
+  padding: 0rem 1rem;
+}
+
+/* ########## 2.3 Social Page ########## */
 .social-h3 {
   text-align: center;
   font-size: 3rem;
   margin-top: 5rem;
+}
+
+/* ########## 2.4 Session Page ########## */
+
+.session-title {
+  background-color: #268bcc;
+  color: #f5f5f5;
+  font-size: 2rem;
+  text-align: center;
+  padding: 1rem 2rem;
+  text-align: center;
+  width: 50%;
+}
+
+.session-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.session-list {
+  width: 35ch;
+}
+
+.session-text {
+  width: 35ch;
 }
 
 /* ############################################################################
@@ -107,8 +159,7 @@ footer p {
                               3. Layouts
 
 ##############################################################################*/
-
-/* ############################### 3.1 Header ################################*/
+/* ########### 3.1 Header ##########*/
 header {
   color: #ffffff;
   text-align: center;
@@ -139,9 +190,31 @@ header {
   color: #268bcc;
 }
 
+/* ########### 3.2 Home Page ######### */
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+/* ########### 3.3 Session Page ########## */
 
-/* ############################# 3.2 Footer ################################# */
+.session-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.session-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ########### 3.4 Footer ############ */
 footer {
   display: flex;
   align-items: center;
@@ -160,7 +233,6 @@ footer {
                               4. Components
 
 ##############################################################################*/
-
 /* ####################### 4.1 Side Menu ######################### */
 .side-nav {
   height: 100%;
@@ -280,15 +352,14 @@ footer {
 }
 
 /*############################################################################*/
-/* ####################### 2.2 Link Styling ########################## */
-
+/* ####################### 4.2 Link Styling ########################## */
 /* link & button styling with hover animation */
 .social-link-grid {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 1rem;
   margin-top: 3rem;
-  justify-items: center;
+  place-items: center;
 }
 
 .social-link-item {
@@ -313,7 +384,6 @@ footer {
 .link-style:hover, .link-style:focus {
   background-color: #268bcc;
   color: #f5f5f5;
-  transform: rotate(1deg);
 }
 
 .link-style-icon {
@@ -324,8 +394,9 @@ footer {
 .button-text {
   display: none;
 }
+
 /*############################################################################*/
-/* ############################# Hero cover #################################*/
+/* ############################# 4.3 Hero cover #################################*/
 .hero-cover {
   display: grid;
   place-items: center;
@@ -359,24 +430,10 @@ footer {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url(../images/michal-matlon-unsplash-mobile.jpg);
 }
-/* ############################################################################
 
-                                Home Page CSS
-
-############################################################################# */
-
-/* ##### Main ###### */
-.home-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0px;
-}
-
-.home-content p {
-  margin: 0 0;
-}
-
+/*############################################################################*/
+/* ############# 4.4 Buttons ##############*/
+/* Home page */
 .hero-button {
   background-color: #339071;
   color: #f5f5f5;
@@ -399,113 +456,11 @@ footer {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 1);
 }
 
-
-
-/* ############################################################################
-
-                            About Page CSS
-
-############################################################################# */
-
-.about-intro-text {
-  margin: 0px;
-  text-align: center;
-  font-size: 2rem;
-  margin-top: 5rem;
-}
-
-.about-intro-hero-name {
-  margin: 0px;
-  text-align: center;
-  font-size: 3rem;
-}
-
-.about-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-
-.about-text p {
-  margin: 1rem 1rem;
-  padding: 0rem 1rem;
-}
-
-/* .photo-container {
-  display: box;
-  justify-content: center;
-} */
-.photo-embed {
-  height: auto;
-  width: 350px;
-  Z-index: -1;
-  filter: grayscale(1);
-  transition: filter 200ms ease, transform 250ms linear;
-}
-
-.photo-container:hover img,
-.photo-container:focus img {
-  filter: grayscale(0);
-  transform: scale(1.05) rotate(1deg);
-}
-
-/* ############################################################################
-
-                            Session Page CSS
-
-############################################################################# */
-
-.session-title {
-  text-align: center;
-  font-size: 3rem;
-}
-
-.session-list {
-  width: 45ch;
-  padding: 1rem;
-  text-align: left;
-}
-
-.session-copy {
-  text-align: center;
-}
-
-.session-QRcode {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: 2rem;
-}
-
-.session-QRcode-title {
-  background-color: #268bcc;
-  color: #f5f5f5;
-  font-size: 2rem;
-  text-align: center;
-  padding: 1rem 2rem;
-  width: 100%%;
-}
-
-.session-QRcode-text {
-  width: 45ch;
-  display: flex;
-  justify-content: center;
-  margin: 2rem;
-}
-
-.session-QRcode-text p {
-  height: auto;
-}
-
-.session-copy {
-  display: flex;
-  flex-direction: column;
-}
+/* Session Page */
 
 .session-button {
-  width: 10rem;
-  padding: 1rem;
+  width: 12rem;
+  padding: 1rem 2rem;
   background-color: #f5f5f5;
   color: #268bcc;
   border: 1px solid #268bcc;
@@ -520,64 +475,23 @@ footer {
 }
 
 #session-button-hover-text {
+  width: 5rem;
   padding: 1rem;
   border: 1px solid #268bcc;
   margin: 0.5rem;
   border-radius: 5px;
+  text-align: center;
 }
 
-.modal-background {
-  display: none;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  /* height: 100%; */
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 1;
+/*############################################################################*/
+/* ############## 4.5 Photo Embeds ###############*/
+.photo-embed {
+  height: auto;
+  width: 350px;
+  transition: filter 200ms ease, transform 250ms linear;
 }
 
-.session-button-modal-h1 {
-  background-color: #f5f5f5;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px 4px rgba(0, 0, 0, .3);
-  font-size: 2.5rem;
-  padding: 1rem;
-}
-
-.modal-close-button {
-  position: absolute;
-  top: 25px;
-  right: 25px;
-  width: 2rem;
-  text-decoration: none;
-  background-color: transparent;
-  border: 1px solid #f5f5f5;
-  color: #f5f5f5;
-  transition: 0.3s;
-  border-radius: 5px;
-  border: none;
-  font-size: 1rem;
-}
-
-.session-button-modal-text .modal-close-button {
-  padding: 20px;
-}
-
-.modal-close-icon {
-  font-size: 1rem;
-}
-
-.modal-close-button:hover {
-  color: #268bcc;
-  background-color: #f5f5f5;
-  border: 1px solid #268bcc;
-}
-
+/*############################################################################*/
 /* ############################################################################
 
                       5. CSS Responsive Page Points
@@ -585,7 +499,30 @@ footer {
 ############################################################################# */
 @media screen and (min-width: 750px) {
 
-  /* Tablets */
+  /* ########## Tablets ########## */
+  /* ###### Typography ###### */
+  p {
+    width: 50ch;
+  }
+  /*  ##### Layouts ##### */
+  /* ##### Components ##### */
+  /* Link Styling */
+  .social-link-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.5rem;
+  }
+
+  .link-style {
+    padding: 2rem 8rem;
+  }
+
+  .social-link-item {
+
+    width: 40%;
+  }
+
+  /* Hero Cover */
   .hero-cover-home {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
       url(../images/holgersson-unsplash.jpg);
@@ -611,22 +548,7 @@ footer {
       url(../images/michal-matlon-unsplash.jpg);
   }
 
-  .social-links {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 0.5rem;
-  }
-
-  .link-style {
-    padding: 2rem 8rem;
-  }
-
-  .social-link-item {
-    grid-gap: 0;
-    width: 40%;
-  }
-
-  /* ### About Page ### */
+  /* Photo Embed */
   .photo-embed {
     height: auto;
     width: 500px;
@@ -635,10 +557,29 @@ footer {
   /*Add new content before this comment*/
 }
 
-@media screen and (min-width: 970px) {
+@media screen and (min-width: 1100px) {
 
-  /* Desktops */
-  /* ##### Global CSS */
+  /* ########## Desktops ########## */
+  /* ##### Typography ##### */
+  /* ##### Layouts ##### */
+  /*session page */
+  .session-list {
+    width: 50ch;
+  }
+
+  .session-text {
+    width: 50ch;
+  }
+
+  /* ##### Components ##### */
+  /* Link Styling */
+  .social-link-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    margin: 2rem;
+  }
+
+  /* Hero Cover */
   .hero-cover-home {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
       url(../images/holgersson-unsplash.jpg);
@@ -670,31 +611,7 @@ footer {
     color: lightgray;
   }
 
-  /* .menu-icon {
-    font-size: 3rem;
-  } */
-  /* ##### Home Page ####### */
-  .home-content p {
-    width: 45ch;
-    padding: 0px;
-  }
-
-  /* ##### About Page ###### */
-  .about-text p {
-    padding: 0px 20%;
-    margin: 0.5rem 0;
-  }
-
-  .social-link-grid {
-    grid-template-columns: 1fr 1fr;
-    margin: 2.5rem 2.5rem;
-  }
-
-  .social-link-item {
-    grid-gap: 0;
-    width: 40%;
-  }
-
+/* Photo Embed */
   .photo-embed {
     margin: 1rem 0;
     height: auto;
@@ -766,13 +683,4 @@ footer {
 
 .shadow-footer {
   box-shadow: 2px 0 4px 4px rgba(0, 0, 0, .3);
-}
-
-/*will not work for animation*/
-.display-none {
-  display: none;
-}
-
-.display {
-  display: block;
 }
